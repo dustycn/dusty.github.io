@@ -1,2 +1,2 @@
-# dusty.github.io
+# dustycn.github.io
 dusty's blog
