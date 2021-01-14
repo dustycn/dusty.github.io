@@ -23,18 +23,31 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"dustycn.github.io","root":"/","images":"/images","scheme":"Muse","version":"8.2.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":"ture","lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":false,"nav":null,"activeClass":"disqus"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
-<meta name="description" content="下载最新版本的RobotStudiohttps:&#x2F;&#x2F;new.abb.com&#x2F;products&#x2F;robotics&#x2F;robotstudio 安装好后的打开界面 选择“希望申请使用许可证：    选择”RobotStudio Premium”:    点击”完成”，提示重启激活：   目前只有30天的试用期。">
+<meta name="description" content="下载最新版本的RobotStudiohttps:&#x2F;&#x2F;new.abb.com&#x2F;products&#x2F;robotics&#x2F;robotstudio 激活选择”希望申请使用许可证”：  选择”RobotStudio Premium”:  点击”完成”，提示重启激活：  目前只有30天的试用期。 安装Robotware: 创建工作站： 导入ABB模型库：  使用Ctrl+鼠标左键可以移动模型。 导入模型库：  添">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ABB RobotStudio2020 试用">
+<meta property="og:title" content="ABB RobotStudio2020 练习环境搭建">
 <meta property="og:url" content="http://dustycn.github.io/2021/01/13/ABB-RobotStudio2020-%E7%BB%83%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/index.html">
 <meta property="og:site_name" content="DUSTY&#39;S BLOG">
-<meta property="og:description" content="下载最新版本的RobotStudiohttps:&#x2F;&#x2F;new.abb.com&#x2F;products&#x2F;robotics&#x2F;robotstudio 安装好后的打开界面 选择“希望申请使用许可证：    选择”RobotStudio Premium”:    点击”完成”，提示重启激活：   目前只有30天的试用期。">
+<meta property="og:description" content="下载最新版本的RobotStudiohttps:&#x2F;&#x2F;new.abb.com&#x2F;products&#x2F;robotics&#x2F;robotstudio 激活选择”希望申请使用许可证”：  选择”RobotStudio Premium”:  点击”完成”，提示重启激活：  目前只有30天的试用期。 安装Robotware: 创建工作站： 导入ABB模型库：  使用Ctrl+鼠标左键可以移动模型。 导入模型库：  添">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210113210029.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210113211205.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210113211338.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114203835.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114205234.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114205337.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114205851.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114210147.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114210723.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114211130.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114211340.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114211550.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114211716.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114211934.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114212915.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114213211.png">
 <meta property="article:published_time" content="2021-01-13T13:53:02.000Z">
-<meta property="article:modified_time" content="2021-01-14T14:33:18.131Z">
+<meta property="article:modified_time" content="2021-01-14T14:38:52.523Z">
 <meta property="article:author" content="DUSTY">
 <meta property="article:tag" content="ABB,RobotStudio">
 <meta name="twitter:card" content="summary">
@@ -53,7 +66,7 @@
     lang   : 'en'
   };
 </script>
-<title>ABB RobotStudio2020 试用 | DUSTY'S BLOG</title>
+<title>ABB RobotStudio2020 练习环境搭建 | DUSTY'S BLOG</title>
   
 
 
@@ -166,7 +179,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC%E7%9A%84RobotStudio"><span class="nav-number">1.</span> <span class="nav-text">下载最新版本的RobotStudio</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%A5%BD%E5%90%8E%E7%9A%84%E6%89%93%E5%BC%80%E7%95%8C%E9%9D%A2"><span class="nav-number">2.</span> <span class="nav-text">安装好后的打开界面</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC%E7%9A%84RobotStudio"><span class="nav-number">1.</span> <span class="nav-text">下载最新版本的RobotStudio</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BF%80%E6%B4%BB"><span class="nav-number">2.</span> <span class="nav-text">激活</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Robotware"><span class="nav-number">3.</span> <span class="nav-text">安装Robotware:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%B7%A5%E4%BD%9C%E7%AB%99%EF%BC%9A"><span class="nav-number">4.</span> <span class="nav-text">创建工作站：</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -237,7 +250,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          ABB RobotStudio2020 试用
+          ABB RobotStudio2020 练习环境搭建
         </h1>
 
         <div class="post-meta-container">
@@ -255,7 +268,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-01-14 21:33:18" itemprop="dateModified" datetime="2021-01-14T21:33:18+07:00">2021-01-14</time>
+        <time title="Modified: 2021-01-14 21:38:52" itemprop="dateModified" datetime="2021-01-14T21:38:52+07:00">2021-01-14</time>
       </span>
 
   
@@ -283,19 +296,40 @@
     
     <div class="post-body" itemprop="articleBody">
         <h2 id="下载最新版本的RobotStudio"><a href="#下载最新版本的RobotStudio" class="headerlink" title="下载最新版本的RobotStudio"></a>下载最新版本的RobotStudio</h2><p><a target="_blank" rel="noopener" href="https://new.abb.com/products/robotics/robotstudio">https://new.abb.com/products/robotics/robotstudio</a></p>
-<h2 id="安装好后的打开界面"><a href="#安装好后的打开界面" class="headerlink" title="安装好后的打开界面"></a>安装好后的打开界面</h2><ol>
-<li>选择“希望申请使用许可证：</li>
-</ol>
+<h2 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h2><p>选择”希望申请使用许可证”：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210113210029.png" alt="20210113210029"></p>
-<ol start="2">
-<li>选择”RobotStudio Premium”:</li>
-</ol>
+<p>选择”RobotStudio Premium”:</p>
 <p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210113211205.png" alt="20210113211205"></p>
-<ol start="3">
-<li>点击”完成”，提示重启激活：</li>
-</ol>
+<p>点击”完成”，提示重启激活：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210113211338.png" alt="20210113211338"></p>
-<p>目前只有30天的试用期。</p>
+<pre><code>目前只有30天的试用期。</code></pre>
+<h2 id="安装Robotware"><a href="#安装Robotware" class="headerlink" title="安装Robotware:"></a>安装Robotware:</h2><p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114203835.png" alt="20210114203835"></p>
+<h2 id="创建工作站："><a href="#创建工作站：" class="headerlink" title="创建工作站："></a>创建工作站：</h2><p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114205234.png" alt="20210114205234"></p>
+<p>导入ABB模型库：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114205337.png" alt="20210114205337"></p>
+<pre><code>使用Ctrl+鼠标左键可以移动模型。</code></pre>
+<p>导入模型库：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114205851.png" alt="20210114205851"></p>
+<p>添加模型到手臂：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114210147.png" alt="20210114210147"></p>
+<pre><code>直接拖动模型到手臂上即可安装</code></pre>
+<p>从布局导入虚拟控制器：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114210723.png" alt="20210114210723"></p>
+<p>下一个，到配置选项：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114211130.png" alt="20210114211130"></p>
+<p>选择默认语言：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114211340.png" alt="20210114211340"></p>
+<p>选择 Industrial Networks:</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114211550.png" alt="20210114211550"></p>
+<p>选择 Anybus Adapters:</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114211716.png" alt="20210114211716"></p>
+<pre><code>其它功能安装需要选择。</code></pre>
+<p>等待控制器启动：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114211934.png" alt="20210114211934"></p>
+<p>启动虚拟示教器：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114212915.png" alt="20210114212915"></p>
+<p>至此RS初始练习环境已搭建完成：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114213211.png" alt="20210114213211"></p>
 
     </div>
 
@@ -408,7 +442,7 @@
   var disqus_config = function() {
     this.page.url = "http://dustycn.github.io/2021/01/13/ABB-RobotStudio2020-%E7%BB%83%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/";
     this.page.identifier = "2021/01/13/ABB-RobotStudio2020-练习环境搭建/";
-    this.page.title = "ABB RobotStudio2020 试用";
+    this.page.title = "ABB RobotStudio2020 练习环境搭建";
     };
   NexT.utils.loadComments('#disqus_thread', () => {
     if (window.DISQUS) {
