@@ -197,6 +197,95 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://dustycn.github.io/2021/06/18/VS-Code-sftp%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DUSTY">
+      <meta itemprop="description" content="Records During Working and Study">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DUSTY'S BLOG">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/06/18/VS-Code-sftp%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/" class="post-title-link" itemprop="url">VS Code sftp插件使用说明</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-06-18 09:29:32 / Modified: 09:30:27" itemprop="dateCreated datePublished" datetime="2021-06-18T09:29:32+07:00">2021-06-18</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2021/06/18/VS-Code-sftp%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/06/18/VS-Code-sftp插件使用说明/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>测试的虚拟主机是<strong>老薛主机</strong></p>
+<blockquote>
+<p>按照网上搜索结果配置插件json文件报错，<code>name</code>要加，随便取个名字即可；<br>老薛主机默认分配的是FTP，不是SFTP，json默认要改成：”protocol”: “ftp”；<br>老薛主机分配的服务器地址：ftp.XXXX.com解析不到地址，要使用主机实际IP地址；<br>老薛主机在分配FTP账户名称的时候已经对应了远程路径，只需要使用对应用户名和密码即可登录到对应的路径下，指定根目录就好：<code>&quot;remotePath&quot;: &quot;/&quot;</code>，除非你是对应的路径下面再新建文件夹;<br>json文件不能写注释（json5据说支持）；<br>多个sftp站点同时使用，注意context（本地绝对路径）项不能相同；<br>对应的属性：</p>
+<blockquote>
+<p>uploadOnSave：本地更新文件保存会自动同步到远程文件（不会同步重命名文件和删除文件）<br>downloadOnOpen：从远程服务器下载打开的文件<br>ignore：忽略的文件（匹配的文件不会同步）<br>watcher：监听器（可以重命名文件和删除文件）<br>autoUpload：文件变更会自动同步（修改和重命名）</p>
+<blockquote>
+<p>每次编辑<code>.md</code>文件，保存时，<code>.md</code>文件会自动上传，但<code>Ctrl+Shit+P</code>使用Markdown All In One插件生成的<code>.html</code>不会自动上传，要打开后<code>Ctrl+S</code>后才会上传，可以使用<code>Ctrl+Shif+U</code>查看上传状态；<br>autoDelete：文件删除会自动同步<br>Upload Folder 和 Download Folder 在 uploadOnSave 和 watcher 都关闭的情况下使用。</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong><code>sftp.json</code>:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;name&quot;: &quot;uptodate.top&quot;,</span><br><span class="line">    &quot;host&quot;: &quot;154.213.16.5&quot;,</span><br><span class="line">    &quot;port&quot;: 21,</span><br><span class="line">    &quot;username&quot;: &quot;uptodate@uptodate.top&quot;,</span><br><span class="line">    &quot;password&quot;: &quot;Bz3mqWMgq9tgf2r&quot;,</span><br><span class="line">    &quot;protocol&quot;: &quot;ftp&quot;, </span><br><span class="line">    &quot;remotePath&quot;: &quot;&#x2F;&quot;,</span><br><span class="line">    &quot;context&quot;: &quot;d:&#x2F;2020&#x2F;vsCode&#x2F;uptodate&#x2F;&quot;,</span><br><span class="line">    &quot;interactiveAuth&quot;: true,</span><br><span class="line">    &quot;uploadOnSave&quot;: true,</span><br><span class="line">    &quot;syncMode&quot;: &quot;update&quot;,</span><br><span class="line">    &quot;ignore&quot;: [</span><br><span class="line">        &quot;**&#x2F;.vscode&#x2F;**&quot;,</span><br><span class="line">        &quot;**&#x2F;.git&#x2F;**&quot;,</span><br><span class="line">        &quot;**&#x2F;.DS_Store&quot;</span><br><span class="line">    ],</span><br><span class="line">    &quot;watcher&quot;: &#123;</span><br><span class="line">        &quot;files&quot;: &quot;true&quot;,</span><br><span class="line">        &quot;autoUpload&quot;: true,</span><br><span class="line">        &quot;autoDelete&quot;: true</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://dustycn.github.io/2021/02/10/ABB-%E6%9C%BA%E5%99%A8%E4%BA%BAIO%E9%80%9A%E8%AE%AF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">

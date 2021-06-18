@@ -23,32 +23,21 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"dustycn.github.io","root":"/","images":"/images","scheme":"Muse","version":"8.2.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":"ture","lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":false,"nav":null,"activeClass":"disqus"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
-<meta name="description" content="ABB的标准IO板(如DSQC651)提供了常用的信号处理接口,IO板根据不同配置可选择加装：  数字输入DI; 数据输出DO; 模拟输入AI； 模拟输出AO； 输送链跟踪；  ABB机器人可以选配标准的ABB的PLC，直接在示教器上与PLC通讯，省去与外部PLC通讯的麻烦。  以DSQC651为例：  点击菜单，控制面板-&gt;配置-&gt;Unit-&gt;显示全部-&gt;添加-&gt;设">
+<meta name="description" content="测试的虚拟主机是老薛主机  按照网上搜索结果配置插件json文件报错，name要加，随便取个名字即可；老薛主机默认分配的是FTP，不是SFTP，json默认要改成：”protocol”: “ftp”；老薛主机分配的服务器地址：ftp.XXXX.com解析不到地址，要使用主机实际IP地址；老薛主机在分配FTP账户名称的时候已经对应了远程路径，只需要使用对应用户名和密码即可登录到对应的路径下，指定根目">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ABB 机器人IO通讯">
-<meta property="og:url" content="http://dustycn.github.io/2021/02/10/ABB-%E6%9C%BA%E5%99%A8%E4%BA%BAIO%E9%80%9A%E8%AE%AF/index.html">
+<meta property="og:title" content="VS Code sftp插件使用说明">
+<meta property="og:url" content="http://dustycn.github.io/2021/06/18/VS-Code-sftp%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/index.html">
 <meta property="og:site_name" content="DUSTY&#39;S BLOG">
-<meta property="og:description" content="ABB的标准IO板(如DSQC651)提供了常用的信号处理接口,IO板根据不同配置可选择加装：  数字输入DI; 数据输出DO; 模拟输入AI； 模拟输出AO； 输送链跟踪；  ABB机器人可以选配标准的ABB的PLC，直接在示教器上与PLC通讯，省去与外部PLC通讯的麻烦。  以DSQC651为例：  点击菜单，控制面板-&gt;配置-&gt;Unit-&gt;显示全部-&gt;添加-&gt;设">
+<meta property="og:description" content="测试的虚拟主机是老薛主机  按照网上搜索结果配置插件json文件报错，name要加，随便取个名字即可；老薛主机默认分配的是FTP，不是SFTP，json默认要改成：”protocol”: “ftp”；老薛主机分配的服务器地址：ftp.XXXX.com解析不到地址，要使用主机实际IP地址；老薛主机在分配FTP账户名称的时候已经对应了远程路径，只需要使用对应用户名和密码即可登录到对应的路径下，指定根目">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210125531.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210130541.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210131558.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210131900.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210132112.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210132441.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210132717.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210133721.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210134006.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210142614.png">
-<meta property="article:published_time" content="2021-02-10T05:46:36.000Z">
-<meta property="article:modified_time" content="2021-02-10T07:27:47.739Z">
+<meta property="article:published_time" content="2021-06-18T02:29:32.000Z">
+<meta property="article:modified_time" content="2021-06-18T02:30:27.374Z">
 <meta property="article:author" content="DUSTY">
-<meta property="article:tag" content="ABB">
+<meta property="article:tag" content="Arduino, Python, Raspberry Pi">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210125531.png">
 
 
-<link rel="canonical" href="http://dustycn.github.io/2021/02/10/ABB-%E6%9C%BA%E5%99%A8%E4%BA%BAIO%E9%80%9A%E8%AE%AF/">
+<link rel="canonical" href="http://dustycn.github.io/2021/06/18/VS-Code-sftp%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">
 
 
 <script class="page-configurations">
@@ -60,7 +49,7 @@
     lang   : 'en'
   };
 </script>
-<title>ABB 机器人IO通讯 | DUSTY'S BLOG</title>
+<title>VS Code sftp插件使用说明 | DUSTY'S BLOG</title>
   
 
 
@@ -148,7 +137,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -161,7 +150,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Profibus%E8%AE%BE%E9%85%8D%E5%99%A8%E7%9A%84%E8%BF%9E%E6%8E%A5"><span class="nav-number">1.</span> <span class="nav-text">Profibus设配器的连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E4%B8%8EIO%E4%BF%A1%E5%8F%B7%E5%85%B3%E8%81%94"><span class="nav-number">2.</span> <span class="nav-text">系统输入输出与IO信号关联</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E7%BC%96%E7%A8%8B%E6%8C%89%E9%94%AE"><span class="nav-number">3.</span> <span class="nav-text">可编程按键</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -212,7 +200,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://dustycn.github.io/2021/02/10/ABB-%E6%9C%BA%E5%99%A8%E4%BA%BAIO%E9%80%9A%E8%AE%AF/">
+    <link itemprop="mainEntityOfPage" href="http://dustycn.github.io/2021/06/18/VS-Code-sftp%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -225,7 +213,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          ABB 机器人IO通讯
+          VS Code sftp插件使用说明
         </h1>
 
         <div class="post-meta-container">
@@ -237,7 +225,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-02-10 12:46:36 / Modified: 14:27:47" itemprop="dateCreated datePublished" datetime="2021-02-10T12:46:36+07:00">2021-02-10</time>
+      <time title="Created: 2021-06-18 09:29:32 / Modified: 09:30:27" itemprop="dateCreated datePublished" datetime="2021-06-18T09:29:32+07:00">2021-06-18</time>
     </span>
 
   
@@ -249,8 +237,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/2021/02/10/ABB-%E6%9C%BA%E5%99%A8%E4%BA%BAIO%E9%80%9A%E8%AE%AF/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/02/10/ABB-机器人IO通讯/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2021/06/18/VS-Code-sftp%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/06/18/VS-Code-sftp插件使用说明/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -264,45 +252,18 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>ABB的标准IO板(如DSQC651)提供了常用的信号处理接口,IO板根据不同配置可选择加装：</p>
-<ul>
-<li>数字输入DI;</li>
-<li>数据输出DO;</li>
-<li>模拟输入AI；</li>
-<li>模拟输出AO；</li>
-<li>输送链跟踪；</li>
-</ul>
-<p>ABB机器人可以选配标准的ABB的PLC，直接在示教器上与PLC通讯，省去与外部PLC通讯的麻烦。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210125531.png" alt="20210210125531"></p>
-<p>以DSQC651为例：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210130541.png" alt="20210210130541"></p>
-<p>点击菜单，<strong>控制面板-&gt;配置-&gt;Unit-&gt;显示全部-&gt;添加-&gt;设置上图参数-&gt;提示是否要重启，先不要重启，等全部设定完成后再重启</strong></p>
-<p>后退至配置，<strong>选择Signal-&gt;显示全部-&gt;添加-&gt;按下图设定di1-&gt;暂时不重启</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210131558.png" alt="20210210131558"></p>
-<p>在Signal下，<strong>添加-&gt;按下图设定do1-&gt;暂不重启</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210131900.png" alt="20210210131900"></p>
-<p>组输入信号：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210132112.png" alt="20210210132112"></p>
-<p>Signal下，<strong>添加-&gt;按上图设定gi1-&gt;暂不重启</strong></p>
-<p>组输出信号：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210132441.png" alt="20210210132441"></p>
-<p>Signal下，<strong>添加-&gt;按上图设定go1-&gt;暂不重启</strong></p>
-<p>模拟输出信号：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210132717.png" alt="20210210132717"></p>
-<p>Signal下，<strong>添加-&gt;按上图设定ao1-&gt;重启</strong></p>
-<h2 id="Profibus设配器的连接"><a href="#Profibus设配器的连接" class="headerlink" title="Profibus设配器的连接"></a>Profibus设配器的连接</h2><p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210133721.png" alt="20210210133721"></p>
-<p>打开菜单，<strong>控制面板-&gt;配置-&gt;Bus-&gt;确认一下机器有无带Profibus-&gt;Unit type-&gt;显示全部-&gt;DP_SLAVE-&gt;编辑-&gt;设置Input Size,Output Size 为 64（DSQ667支持512个数字即64个字节）-&gt;暂不重启-&gt;Unit-&gt;添加-&gt;按照下图设置-&gt;先不重启</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210134006.png" alt="20210210134006"></p>
-<p>Signal下，<strong>添加-&gt;Assighed Unit 指向 profibus8即可</strong></p>
-<h2 id="系统输入输出与IO信号关联"><a href="#系统输入输出与IO信号关联" class="headerlink" title="系统输入输出与IO信号关联"></a>系统输入输出与IO信号关联</h2><ul>
-<li>实现外部信号控制系统状态，如电机开启，程序启动；</li>
-<li>采集系统的状态数据供外部设备使用；</li>
-</ul>
-<p>打开菜单，<strong>控制面板-&gt;配置-&gt;System Input, Sytem Output-&gt;设置System Output为例-&gt;添加-&gt;Signal name(比如选择已经添加好的do1)，Status(比如Auto On表示自动)，当机器人处于Auto On的状态时，do1输出1-&gt;重启</strong>。</p>
-<p>返回菜单,<strong>输入/输出-&gt;右下角视图-&gt;I/O设备（单元）-&gt;选择之前添加的IO卡-&gt;信号-&gt;do1如果是1，说明系统是自动模式，切换到收到状态时，do1变为0</strong>.</p>
-<h2 id="可编程按键"><a href="#可编程按键" class="headerlink" title="可编程按键"></a>可编程按键</h2><p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210142614.png" alt="20210210142614"></p>
-<p>打开菜单，<strong>控制面板-&gt;ProgKey进入设置，允许自动模式最好设置为否（关乎安全）-&gt;可以在输入输出选项中查看按键效果</strong>。</p>
-
+        <p>测试的虚拟主机是<strong>老薛主机</strong></p>
+<blockquote>
+<p>按照网上搜索结果配置插件json文件报错，<code>name</code>要加，随便取个名字即可；<br>老薛主机默认分配的是FTP，不是SFTP，json默认要改成：”protocol”: “ftp”；<br>老薛主机分配的服务器地址：ftp.XXXX.com解析不到地址，要使用主机实际IP地址；<br>老薛主机在分配FTP账户名称的时候已经对应了远程路径，只需要使用对应用户名和密码即可登录到对应的路径下，指定根目录就好：<code>&quot;remotePath&quot;: &quot;/&quot;</code>，除非你是对应的路径下面再新建文件夹;<br>json文件不能写注释（json5据说支持）；<br>多个sftp站点同时使用，注意context（本地绝对路径）项不能相同；<br>对应的属性：</p>
+<blockquote>
+<p>uploadOnSave：本地更新文件保存会自动同步到远程文件（不会同步重命名文件和删除文件）<br>downloadOnOpen：从远程服务器下载打开的文件<br>ignore：忽略的文件（匹配的文件不会同步）<br>watcher：监听器（可以重命名文件和删除文件）<br>autoUpload：文件变更会自动同步（修改和重命名）</p>
+<blockquote>
+<p>每次编辑<code>.md</code>文件，保存时，<code>.md</code>文件会自动上传，但<code>Ctrl+Shit+P</code>使用Markdown All In One插件生成的<code>.html</code>不会自动上传，要打开后<code>Ctrl+S</code>后才会上传，可以使用<code>Ctrl+Shif+U</code>查看上传状态；<br>autoDelete：文件删除会自动同步<br>Upload Folder 和 Download Folder 在 uploadOnSave 和 watcher 都关闭的情况下使用。</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong><code>sftp.json</code>:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;name&quot;: &quot;uptodate.top&quot;,</span><br><span class="line">    &quot;host&quot;: &quot;154.213.16.5&quot;,</span><br><span class="line">    &quot;port&quot;: 21,</span><br><span class="line">    &quot;username&quot;: &quot;uptodate@uptodate.top&quot;,</span><br><span class="line">    &quot;password&quot;: &quot;Bz3mqWMgq9tgf2r&quot;,</span><br><span class="line">    &quot;protocol&quot;: &quot;ftp&quot;, </span><br><span class="line">    &quot;remotePath&quot;: &quot;&#x2F;&quot;,</span><br><span class="line">    &quot;context&quot;: &quot;d:&#x2F;2020&#x2F;vsCode&#x2F;uptodate&#x2F;&quot;,</span><br><span class="line">    &quot;interactiveAuth&quot;: true,</span><br><span class="line">    &quot;uploadOnSave&quot;: true,</span><br><span class="line">    &quot;syncMode&quot;: &quot;update&quot;,</span><br><span class="line">    &quot;ignore&quot;: [</span><br><span class="line">        &quot;**&#x2F;.vscode&#x2F;**&quot;,</span><br><span class="line">        &quot;**&#x2F;.git&#x2F;**&quot;,</span><br><span class="line">        &quot;**&#x2F;.DS_Store&quot;</span><br><span class="line">    ],</span><br><span class="line">    &quot;watcher&quot;: &#123;</span><br><span class="line">        &quot;files&quot;: &quot;true&quot;,</span><br><span class="line">        &quot;autoUpload&quot;: true,</span><br><span class="line">        &quot;autoDelete&quot;: true</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -310,22 +271,16 @@
     
 
     <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/ABB/" rel="tag"># ABB</a>
-          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/01/15/ABB-RobotStudio-%E8%99%9A%E6%8B%9F%E7%A4%BA%E6%95%99%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/" rel="prev" title="ABB RobotStudio 虚拟示教器的使用">
-                  <i class="fa fa-chevron-left"></i> ABB RobotStudio 虚拟示教器的使用
+                <a href="/2021/02/10/ABB-%E6%9C%BA%E5%99%A8%E4%BA%BAIO%E9%80%9A%E8%AE%AF/" rel="prev" title="ABB 机器人IO通讯">
+                  <i class="fa fa-chevron-left"></i> ABB 机器人IO通讯
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/06/18/VS-Code-sftp%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/" rel="next" title="VS Code sftp插件使用说明">
-                  VS Code sftp插件使用说明 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -415,9 +370,9 @@
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "http://dustycn.github.io/2021/02/10/ABB-%E6%9C%BA%E5%99%A8%E4%BA%BAIO%E9%80%9A%E8%AE%AF/";
-    this.page.identifier = "2021/02/10/ABB-机器人IO通讯/";
-    this.page.title = "ABB 机器人IO通讯";
+    this.page.url = "http://dustycn.github.io/2021/06/18/VS-Code-sftp%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/";
+    this.page.identifier = "2021/06/18/VS-Code-sftp插件使用说明/";
+    this.page.title = "VS Code sftp插件使用说明";
     };
   NexT.utils.loadComments('#disqus_thread', () => {
     if (window.DISQUS) {
