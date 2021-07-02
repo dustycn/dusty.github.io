@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cn">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -21,15 +21,15 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"dustycn.github.io","root":"/","images":"/images","scheme":"Muse","version":"8.2.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
+    var CONFIG = {"hostname":"dustycn.github.io","root":"/","images":"/images","scheme":"Mist","version":"8.2.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Suche...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
 <meta name="description" content="ABB的标准IO板(如DSQC651)提供了常用的信号处理接口,IO板根据不同配置可选择加装：  数字输入DI; 数据输出DO; 模拟输入AI； 模拟输出AO； 输送链跟踪；  ABB机器人可以选配标准的ABB的PLC，直接在示教器上与PLC通讯，省去与外部PLC通讯的麻烦。  以DSQC651为例：  点击菜单，控制面板-&gt;配置-&gt;Unit-&gt;显示全部-&gt;添加-&gt;设">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ABB 机器人IO通讯">
 <meta property="og:url" content="http://dustycn.github.io/2021/02/10/ABB-%E6%9C%BA%E5%99%A8%E4%BA%BAIO%E9%80%9A%E8%AE%AF/index.html">
-<meta property="og:site_name" content="DUSTY&#39;s BLOG">
+<meta property="og:site_name" content="DUSTY at blogging...">
 <meta property="og:description" content="ABB的标准IO板(如DSQC651)提供了常用的信号处理接口,IO板根据不同配置可选择加装：  数字输入DI; 数据输出DO; 模拟输入AI； 模拟输出AO； 输送链跟踪；  ABB机器人可以选配标准的ABB的PLC，直接在示教器上与PLC通讯，省去与外部PLC通讯的麻烦。  以DSQC651为例：  点击菜单，控制面板-&gt;配置-&gt;Unit-&gt;显示全部-&gt;添加-&gt;设">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210125531.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210130541.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210131558.png">
@@ -57,10 +57,10 @@
     sidebar: "",
     isHome : false,
     isPost : true,
-    lang   : 'en'
+    lang   : 'cn'
   };
 </script>
-<title>ABB 机器人IO通讯 | DUSTY's BLOG</title>
+<title>ABB 机器人IO通讯 | DUSTY at blogging...</title>
   
 
 
@@ -110,7 +110,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    <div class="toggle" aria-label="Navigationsleiste an/ausschalten" role="button">
     </div>
   </div>
 
@@ -118,7 +118,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">DUSTY's BLOG</h1>
+      <h1 class="site-title">DUSTY at blogging...</h1>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">STUDY NOTES</p>
@@ -150,10 +150,10 @@
     <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
-          Table of Contents
+          Inhaltsverzeichnis
         </li>
         <li class="sidebar-nav-overview">
-          Overview
+          Übersicht
         </li>
       </ul>
 
@@ -173,7 +173,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-tags">
         <span class="site-state-item-count">4</span>
-        <span class="site-state-item-name">tags</span>
+        <span class="site-state-item-name">schlagwörter</span>
       </div>
   </nav>
 </div>
@@ -210,7 +210,7 @@
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="cn">
     <link itemprop="mainEntityOfPage" href="http://dustycn.github.io/2021/02/10/ABB-%E6%9C%BA%E5%99%A8%E4%BA%BAIO%E9%80%9A%E8%AE%AF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -220,7 +220,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DUSTY's BLOG">
+      <meta itemprop="name" content="DUSTY at blogging...">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -233,10 +233,10 @@
       <span class="post-meta-item-icon">
         <i class="far fa-calendar"></i>
       </span>
-      <span class="post-meta-item-text">Posted on</span>
+      <span class="post-meta-item-text">Veröffentlicht am</span>
       
 
-      <time title="Created: 2021-02-10 12:46:36 / Modified: 14:27:47" itemprop="dateCreated datePublished" datetime="2021-02-10T12:46:36+07:00">2021-02-10</time>
+      <time title="Erstellt: 2021-02-10 12:46:36 / Geändert am: 14:27:47" itemprop="dateCreated datePublished" datetime="2021-02-10T12:46:36+07:00">2021-02-10</time>
     </span>
 
   
@@ -359,7 +359,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">DUSTY</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a>
   </div>
 
     </div>
