@@ -23,7 +23,7 @@
 <meta name="description" content="DUSTY at Blogging...">
 <meta property="og:type" content="website">
 <meta property="og:title" content="DUSTY">
-<meta property="og:url" content="http://dustycn.github.io/page/2/index.html">
+<meta property="og:url" content="http://dustycn.github.io/archives/2021/index.html">
 <meta property="og:site_name" content="DUSTY">
 <meta property="og:description" content="DUSTY at Blogging...">
 <meta property="og:locale" content="zh_CN">
@@ -32,14 +32,14 @@
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://dustycn.github.io/page/2/">
+<link rel="canonical" href="http://dustycn.github.io/archives/2021/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"page/2/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"archives/2021/index.html","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>DUSTY</title>
+<title>归档 | DUSTY</title>
   
 
 
@@ -181,127 +181,129 @@
 </noscript>
 
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner archive posts-collapse">
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://dustycn.github.io/2021/02/10/ABB-%E6%9C%BA%E5%99%A8%E4%BA%BAIO%E9%80%9A%E8%AE%AF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="DUSTY">
-      <meta itemprop="description" content="DUSTY at Blogging...">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DUSTY">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/02/10/ABB-%E6%9C%BA%E5%99%A8%E4%BA%BAIO%E9%80%9A%E8%AE%AF/" class="post-title-link" itemprop="url">ABB 机器人IO通讯</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-02-10 12:46:36 / 修改时间：14:27:47" itemprop="dateCreated datePublished" datetime="2021-02-10T12:46:36+07:00">2021-02-10</time>
-    </span>
 
   
   
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2021/02/10/ABB-%E6%9C%BA%E5%99%A8%E4%BA%BAIO%E9%80%9A%E8%AE%AF/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/02/10/ABB-机器人IO通讯/" itemprop="commentCount"></span>
-    </a>
-  </span>
   
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>ABB的标准IO板(如DSQC651)提供了常用的信号处理接口,IO板根据不同配置可选择加装：</p>
-<ul>
-<li>数字输入DI;</li>
-<li>数据输出DO;</li>
-<li>模拟输入AI；</li>
-<li>模拟输出AO；</li>
-<li>输送链跟踪；</li>
-</ul>
-<p>ABB机器人可以选配标准的ABB的PLC，直接在示教器上与PLC通讯，省去与外部PLC通讯的麻烦。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210125531.png" alt="20210210125531"></p>
-<p>以DSQC651为例：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210130541.png" alt="20210210130541"></p>
-<p>点击菜单，<strong>控制面板-&gt;配置-&gt;Unit-&gt;显示全部-&gt;添加-&gt;设置上图参数-&gt;提示是否要重启，先不要重启，等全部设定完成后再重启</strong></p>
-<p>后退至配置，<strong>选择Signal-&gt;显示全部-&gt;添加-&gt;按下图设定di1-&gt;暂时不重启</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210131558.png" alt="20210210131558"></p>
-<p>在Signal下，<strong>添加-&gt;按下图设定do1-&gt;暂不重启</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210131900.png" alt="20210210131900"></p>
-<p>组输入信号：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210132112.png" alt="20210210132112"></p>
-<p>Signal下，<strong>添加-&gt;按上图设定gi1-&gt;暂不重启</strong></p>
-<p>组输出信号：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210132441.png" alt="20210210132441"></p>
-<p>Signal下，<strong>添加-&gt;按上图设定go1-&gt;暂不重启</strong></p>
-<p>模拟输出信号：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210132717.png" alt="20210210132717"></p>
-<p>Signal下，<strong>添加-&gt;按上图设定ao1-&gt;重启</strong></p>
-<h2 id="Profibus设配器的连接"><a href="#Profibus设配器的连接" class="headerlink" title="Profibus设配器的连接"></a>Profibus设配器的连接</h2><p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210133721.png" alt="20210210133721"></p>
-<p>打开菜单，<strong>控制面板-&gt;配置-&gt;Bus-&gt;确认一下机器有无带Profibus-&gt;Unit type-&gt;显示全部-&gt;DP_SLAVE-&gt;编辑-&gt;设置Input Size,Output Size 为 64（DSQ667支持512个数字即64个字节）-&gt;暂不重启-&gt;Unit-&gt;添加-&gt;按照下图设置-&gt;先不重启</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210134006.png" alt="20210210134006"></p>
-<p>Signal下，<strong>添加-&gt;Assighed Unit 指向 profibus8即可</strong></p>
-<h2 id="系统输入输出与IO信号关联"><a href="#系统输入输出与IO信号关联" class="headerlink" title="系统输入输出与IO信号关联"></a>系统输入输出与IO信号关联</h2><ul>
-<li>实现外部信号控制系统状态，如电机开启，程序启动；</li>
-<li>采集系统的状态数据供外部设备使用；</li>
-</ul>
-<p>打开菜单，<strong>控制面板-&gt;配置-&gt;System Input, Sytem Output-&gt;设置System Output为例-&gt;添加-&gt;Signal name(比如选择已经添加好的do1)，Status(比如Auto On表示自动)，当机器人处于Auto On的状态时，do1输出1-&gt;重启</strong>。</p>
-<p>返回菜单,<strong>输入/输出-&gt;右下角视图-&gt;I/O设备（单元）-&gt;选择之前添加的IO卡-&gt;信号-&gt;do1如果是1，说明系统是自动模式，切换到收到状态时，do1变为0</strong>.</p>
-<h2 id="可编程按键"><a href="#可编程按键" class="headerlink" title="可编程按键"></a>可编程按键</h2><p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210142614.png" alt="20210210142614"></p>
-<p>打开菜单，<strong>控制面板-&gt;ProgKey进入设置，允许自动模式最好设置为否（关乎安全）-&gt;可以在输入输出选项中查看按键效果</strong>。</p>
+  <div class="post-block">
+    <div class="post-content">
+      <div class="collection-title">
+        <span class="collection-header">嗯..! 目前共计 5 篇日志。 继续努力。</span>
+      </div>
 
       
+    <div class="collection-year">
+      <span class="collection-header">2021</span>
     </div>
 
-    
-    
-    
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2021-07-01T12:11:35+07:00"
+              content="2021-07-01">
+          07-01
+        </time>
+      </div>
 
-    <footer class="post-footer">
-        <div class="post-eof"></div>
+      <div class="post-title">
+          <a class="post-title-link" href="/2021/07/01/%E5%9C%A8%E6%96%87%E7%AB%A0%E4%B8%AD%E4%BD%BF%E7%94%A8Emoji/" itemprop="url">
+            <span itemprop="name">在文章中使用Emoji & Badges❤️</span>
+          </a>
+      </div>
+
       
-    </footer>
+    </header>
   </article>
-</div>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2021-02-10T12:46:36+07:00"
+              content="2021-02-10">
+          02-10
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2021/02/10/ABB-%E6%9C%BA%E5%99%A8%E4%BA%BAIO%E9%80%9A%E8%AE%AF/" itemprop="url">
+            <span itemprop="name">ABB 机器人IO通讯</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2021-01-15T20:09:38+07:00"
+              content="2021-01-15">
+          01-15
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2021/01/15/ABB-RobotStudio-%E8%99%9A%E6%8B%9F%E7%A4%BA%E6%95%99%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/" itemprop="url">
+            <span itemprop="name">ABB RobotStudio 虚拟示教器的使用</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2021-01-13T20:53:02+07:00"
+              content="2021-01-13">
+          01-13
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2021/01/13/ABB-RobotStudio2020-%E7%BB%83%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" itemprop="url">
+            <span itemprop="name">ABB RobotStudio2020 练习环境搭建</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2021-01-11T21:00:19+07:00"
+              content="2021-01-11">
+          01-11
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2021/01/11/VS-Code-Github-Pages-Hexo-%E5%86%99%E5%8D%9A%E5%AE%A2/" itemprop="url">
+            <span itemprop="name">VS Code + Github Pages + Hexo 写博客</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
 
 
-
-
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
+    </div>
+  </div>
+  
+  
+  
 
 </div>
   </main>
