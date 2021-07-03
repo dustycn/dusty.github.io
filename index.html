@@ -85,7 +85,7 @@
 <nav class="site-nav">
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">4</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">5</span></a></li>
         <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档<span class="badge">5</span></a></li>
   </ul>
 </nav>
@@ -140,7 +140,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -223,10 +223,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-07-01 12:11:35 / 修改时间：21:11:19" itemprop="dateCreated datePublished" datetime="2021-07-01T12:11:35+07:00">2021-07-01</time>
+      <time title="创建时间：2021-07-01 12:11:35" itemprop="dateCreated datePublished" datetime="2021-07-01T12:11:35+07:00">2021-07-01</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-03 11:28:07" itemprop="dateModified" datetime="2021-07-03T11:28:07+07:00">2021-07-03</time>
+      </span>
 
   
   
@@ -252,8 +258,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="Emoji-amp-Badges来源"><a href="#Emoji-amp-Badges来源" class="headerlink" title="Emoji &amp; Badges来源"></a>Emoji &amp; Badges来源</h2><p>Emoji：<a target="_blank" rel="noopener" href="https://emojipedia.org/">https://emojipedia.org/</a><br>Badges: <a target="_blank" rel="noopener" href="https://shields.io/">https://shields.io/</a></p>
-<p>试用了几款VS Code插件：</p>
+          <h2 id="什么是-Emoji-Badges"><a href="#什么是-Emoji-Badges" class="headerlink" title="什么是 Emoji, Badges"></a>什么是 Emoji, Badges</h2><p>Emoji是指标签符号：❤️🤣🗝️🚀😂<br>Badges是指徽章：</p>
+<p><img src="https://img.shields.io/github/followers/dustycn?style=social"><br><img src="https://img.shields.io/twitter/follow/dustycn?style=social"></p>
+<h2 id="Emoji-amp-Badges来源"><a href="#Emoji-amp-Badges来源" class="headerlink" title="Emoji &amp; Badges来源"></a>Emoji &amp; Badges来源</h2><p>Emoji：<a target="_blank" rel="noopener" href="https://emojipedia.org/">https://emojipedia.org/</a><br>Badges: <a target="_blank" rel="noopener" href="https://shields.io/">https://shields.io/</a></p>
+<h2 id="VS-Code插件："><a href="#VS-Code插件：" class="headerlink" title="VS Code插件："></a>VS Code插件：</h2><p>VS 扩展库搜索 Emoji 关键词有很多插件可用，试用了几款：</p>
 <ol>
 <li>perkovec.emoji：Ctrl+Shift+P，再Key <code>emoji</code> 搜索关键字插入；</li>
 <li>alexzshl.badges-snippets ：用于调用shields.io的资源；</li>
@@ -264,7 +272,7 @@
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&quot;[markdown]&quot;: &#123;</span><br><span class="line">    &quot;editor.quickSuggestions&quot;:&#123;</span><br><span class="line">        &quot;other&quot;:true,</span><br><span class="line">        &quot;comments&quot;:true,</span><br><span class="line">        &quot;strings&quot;:true,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
 <p>实际测试，发现直接加入如下代码即可：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">    &quot;[markdown]&quot;: &#123;</span><br><span class="line">        &quot;editor.quickSuggestions&quot;: ture    </span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-<p>但是，在Markdown里面开启快速建议，实际体验很不优雅，干扰纯净的写作体验，违背了Markdown的初衷，所以，最后卸载了所有插件，改用Window自带的Emoji插入，需要Badges的时候，自己上shields.io上制作，并保留代码，后续复制粘贴即可.</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>但是，在Markdown里面开启快速建议，实际体验很不优雅，干扰纯净的写作体验，违背了Markdown的初衷，所以，最后卸载了所有插件，改用Window自带的Emoji插入，需要Badges的时候，自己上shields.io上制作，并保留代码，后续复制粘贴即可.</p>
 <p>Windows快速开启Emoji快捷键： Win+. ❤️<br>还可以插入颜文字(●’◡’●)各种符号®,甚至GIF.  </p>
 
       
