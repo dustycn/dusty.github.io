@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://dustycn.github.io/2021/07/06/ABB-RAPID-%E7%A8%8B%E5%BA%8F%E4%BB%A5%E5%8F%8A%E6%8C%87%E4%BB%A4/</loc>
+    
+    <lastmod>2021-07-06</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://dustycn.github.io/2021/07/05/ABB-RAPID-%E7%A8%8B%E5%BA%8F%E6%95%B0%E6%8D%AE/</loc>
     
     <lastmod>2021-07-05</lastmod>
@@ -53,7 +60,7 @@
 
   <url>
     <loc>http://dustycn.github.io/</loc>
-    <lastmod>2021-07-05</lastmod>
+    <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -61,49 +68,56 @@
   
   <url>
     <loc>http://dustycn.github.io/tags/ABB/</loc>
-    <lastmod>2021-07-05</lastmod>
+    <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://dustycn.github.io/tags/RobotStudio/</loc>
-    <lastmod>2021-07-05</lastmod>
+    <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://dustycn.github.io/tags/VS-Code/</loc>
-    <lastmod>2021-07-05</lastmod>
+    <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://dustycn.github.io/tags/Github/</loc>
-    <lastmod>2021-07-05</lastmod>
+    <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://dustycn.github.io/tags/Hexo/</loc>
-    <lastmod>2021-07-05</lastmod>
+    <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://dustycn.github.io/tags/Emoji/</loc>
-    <lastmod>2021-07-05</lastmod>
+    <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://dustycn.github.io/tags/Badges/</loc>
-    <lastmod>2021-07-05</lastmod>
+    <lastmod>2021-07-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://dustycn.github.io/tags/RAPID/</loc>
+    <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
