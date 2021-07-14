@@ -206,7 +206,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://dustycn.github.io/2021/01/13/ABB-RobotStudio2020-%E7%BB%83%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
+    <link itemprop="mainEntityOfPage" href="http://dustycn.github.io/2021/01/13/ABB-RobotStudio-%E7%BB%83%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -219,7 +219,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/01/13/ABB-RobotStudio2020-%E7%BB%83%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="post-title-link" itemprop="url">ABB RobotStudio2020 练习环境搭建</a>
+          <a href="/2021/01/13/ABB-RobotStudio-%E7%BB%83%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="post-title-link" itemprop="url">ABB RobotStudio 练习环境搭建</a>
         </h2>
 
         <div class="post-meta-container">
@@ -237,7 +237,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-07-13 17:07:43" itemprop="dateModified" datetime="2021-07-13T17:07:43+07:00">2021-07-13</time>
+        <time title="修改时间：2021-07-14 16:32:10" itemprop="dateModified" datetime="2021-07-14T16:32:10+07:00">2021-07-14</time>
       </span>
 
   
@@ -249,8 +249,8 @@
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2021/01/13/ABB-RobotStudio2020-%E7%BB%83%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/01/13/ABB-RobotStudio2020-练习环境搭建/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2021/01/13/ABB-RobotStudio-%E7%BB%83%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/01/13/ABB-RobotStudio-练习环境搭建/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -284,6 +284,9 @@
 <li>直接拖动模型到手臂上即可安装</li>
 <li>或者单击要选择的模型，然后在左侧的<strong>布局</strong>选项卡中，右击模型，选择<strong>安装到</strong>手臂：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210713160055.png" alt="20210713160055"></li>
 </ol>
+<blockquote>
+<p>选择的模型有些可以直接安装到之前布置好的基座上，默认是放置到手臂基坐标原点，有些小模型可能会隐藏在手臂基座里面，可以通过左侧<strong>布局</strong>选项卡里选择查看。</p>
+</blockquote>
 <p>拆除模型：</p>
 <ol>
 <li><p>选中要拆除的模型，在左侧<strong>布局</strong>选项卡中选择模型，右击选择<strong>拆除</strong>：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210713154216.png" alt="20210713154216"></p>
@@ -339,7 +342,7 @@
 <td align="left">平移工作站</td>
 </tr>
 <tr>
-<td align="right"><kbd>Ctrl</kbd> + 鼠标左键+拖动鼠标</td>
+<td align="right"><kbd>Ctrl</kbd> + 鼠标右键+拖动鼠标（左小右大）</td>
 <td align="left">缩放工作站</td>
 </tr>
 <tr>
@@ -355,6 +358,15 @@
 <td align="left">屏幕截图到剪贴板</td>
 </tr>
 </tbody></table>
+<h2 id="Freehand-拖动-旋转模型"><a href="#Freehand-拖动-旋转模型" class="headerlink" title="Freehand 拖动/旋转模型"></a>Freehand 拖动/旋转模型</h2><p><strong>基本选项卡</strong>里面有一个<strong>Freehand</strong>控制面板，可以对模型进行拖动/旋转操作，也可以不使用示教器对手臂关键进行拖动：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210714084513.png" alt="20210714084513"></p>
+<blockquote>
+<p>先在Freehand控制面板里面选择需要移动的方式，鼠标悬停图标是有提示文字。点击后回到视图页面选中模型，会出现坐标轴，选中坐标轴（或原点？）后，要一直按住鼠标左键不放拖动或者旋转。<br>目前<strong>拖曳</strong>和<strong>多个机器人手动操作</strong>还没有试成功，后续继续Update.</p>
+</blockquote>
+<p>另外，在视图页面右击鼠标，结合不通的视图，配合<strong>Freehand</strong>的<strong>手动线性</strong>可以很方便的拖动工具模型定位：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210714090751.png" alt="20210714090751"></p>
+<blockquote>
+<p>使用Freehand<strong>手动关节</strong>，第六轴不是很好选中，可以多试几次，不行的话换示教器操作。</p>
+</blockquote>
 
       
     </div>

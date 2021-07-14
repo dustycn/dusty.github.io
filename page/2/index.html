@@ -237,7 +237,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-07-10 13:32:01" itemprop="dateModified" datetime="2021-07-10T13:32:01+07:00">2021-07-10</time>
+        <time title="修改时间：2021-07-14 21:49:38" itemprop="dateModified" datetime="2021-07-14T21:49:38+07:00">2021-07-14</time>
       </span>
 
   
@@ -302,7 +302,12 @@
 </li>
 <li><p>第4个点的位置必须让工具参考点垂直靠上固定点：</p>
 <p> <img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707154731.png" alt="20210707154731"></p>
+<blockquote>
+<p>这个实际在RobotStudio虚拟操作对新手来说比较困难，摸索了一下：先使用示教器，将工具调整到垂直（不需要接触到固定点），然后使用Freehand下的<strong>手动线性</strong>来拖动工具靠上固定点（期间可以使用不通的视图角度确认），<strong>手动线性</strong>模式下，可以一直保证工具垂直：<br> <img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210714104217.png" alt="20210714104217"></p>
+</blockquote>
 </li>
+</ol>
+<ol start="10">
 <li><p>在第4个点的垂直姿态下，移动工具TCP的+X方向，记录下的位置即为第5个点：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707154453.png" alt="20210707154453"></p>
 </li>
@@ -352,7 +357,7 @@
 <li>loaddata: 搬运对象的质量和重心；</li>
 </ul>
 <ol>
-<li><p>示教器界面菜单选择<strong>手动操作</strong>，再选择<strong>有效载荷</strong>，<strong>新建</strong>并设定有效载荷数据的属性，单击<strong>初始值</strong>根据实际请款设定有效载荷数据：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210710124957.png" alt="20210710124957"></p>
+<li><p>示教器界面菜单选择<strong>手动操作</strong>，再选择<strong>有效载荷</strong>，<strong>新建</strong>并设定有效载荷数据的属性，单击<strong>初始值</strong>根据实际情况设定有效载荷数据：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210710124957.png" alt="20210710124957"></p>
 <p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210710125148.png" alt="20210710125148"></p>
 </li>
 <li><p>有效载荷参数含义：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210710125340.png" alt="20210710125340"></p>
@@ -366,6 +371,54 @@
 <li><p>将<strong>load0</strong>变更为我们新建的<strong>load1</strong>即完成设定:<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210710130336.png" alt="20210710130336"></p>
 </li>
 </ol>
+</li>
+</ol>
+<h2 id="调用例行程序（Service-Routine）：LoadIdentify"><a href="#调用例行程序（Service-Routine）：LoadIdentify" class="headerlink" title="调用例行程序（Service Routine）：LoadIdentify"></a>调用例行程序（Service Routine）：LoadIdentify</h2><p>很多时候，我们并不知道工具工件的质量，重心等负荷数据，或者嫌麻烦，可以调用系统自带的例行程序<strong>LoadIdentify</strong>来自动测量和设置这些负荷数据。</p>
+<ol>
+<li><p>手动状态下，打开程序编辑器，点击<strong>调试</strong>，**调用例行程序—**：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210714194706.png" alt="20210714194706"></p>
+</li>
+<li><p>选择<strong>LoadIdentify</strong>，再点击<strong>转到</strong>(其它例行程序后续再研究)：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210714195127.png" alt="20210714195127"></p>
+</li>
+<li><p>开启电机（示教器使能）后，按运行按钮，提示如下画面，点击<strong>OK</strong>：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210714200344.png" alt="20210714200344"></p>
+</li>
+</ol>
+<blockquote>
+<p>提醒运行程序的过程中，程序的指针会丢失，目前的路径也会清除。程序结束后，将PP指向main.按OK继续。</p>
+</blockquote>
+<ol start="4">
+<li><p>提醒是鉴别的是工具还是工件，我的理解是工具就是手臂上装的夹具，工件是夹具上有夹持工件，这里没有夹持工件，选择<strong>Tool</strong>：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210714201038.png" alt="20210714201038"></p>
+</li>
+<li><p>接着提醒工具有没有安装到手臂上，手臂的轴在合适的位置：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210714201734.png" alt="20210714201734"></p>
+</li>
+<li><p>接着提醒确认tool名称是不是对的（不能是tool0,如果不对，重新设置为对tool后，再回到程序编辑器，按示教器运行按钮继续：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210714202223.png" alt="20210714202223"></p>
+</li>
+<li><p>接着问知不知道工具工件的质量，知道的话在定义loaddata的时候可以填写进去，本列选<strong>Unknow mass</strong>:<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210714202620.png" alt="20210714202620"></p>
+</li>
+<li><p>确认配置的角度：这里不是太理解，大概是说要选择轴6的实际位置与 the coming ditto for the measurement movements.建议是+/-90度，最小是+/-30度，如果不是+/- 90度，可以选Other,然后填写实际角度：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210714203854.png" alt="20210714203854"></p>
+</li>
+<li><p>接着会自动检查手臂是不是在一个正确的位置，如果不在正确的位置，会要求拖动（jog)1个或几个轴到指定的位置（角度），粗略的就好。然后点击OK即可。如果还是不正确，手臂会自动的慢速移动到正确的位置，点击提示窗口的<strong>Move</strong>即可，我这边提示要求移动轴5到14度的位置：<br> <img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210714205321.png" alt="20210714205321"></p>
+</li>
+<li><p>拖动的时候会显示角度，拖动后点击OK：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210714205235.png" alt="20210714205235"></p>
+</li>
+<li><p>可能还不正确，程序将慢速移动一些轴关节到精确的位置，点击<strong>MOVE</strong>来调整：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210714205727.png" alt="20210714205727"></p>
+</li>
+<li><p>接着提示说是否要求在正式高速运动之前先低速运动测试（避免撞击到物品和人，但这样会需要更长的时间），另外，如果接下来实际跑程序的时候，你计划选择的是人工全速模式，那这里就不需要要选低速先测试。这里我们选择<strong>NO</strong>，直接跑程序：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210714211833.png" alt="20210714211833"></p>
+</li>
+<li><p>提示切换到自动模式（需要重新回到程序编辑器，开启电机，重新按压示教器运行按钮，电机<strong>MOVE</strong>：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210714212002.png" alt="20210714212002"></p>
+</li>
+<li><p>提示切换回手动模式，并降低速度（也可以不降低），重新开启电机，运行程序，之后再点击<strong>OK</strong>：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210714212732.png" alt="20210714212732"></p>
+</li>
+</ol>
+<ol start="15">
+<li><p>有时候电机显示安全防护停止状态，多试几次，显示电机开启后再运行程序。由于这里用的是仿真环境，所以最后提示没有真实的计算数值：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210714213412.png" alt="20210714213412"></p>
+</li>
+<li><p>但与正式环境的过程是一样的，点击<strong>OK</strong>后，会呈现最终的计算结果，并询问是否更新tool1的loaddata?,点击<strong>YES</strong>更新，保存数据到loaddata：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210714213925.png" alt="20210714213925"></p>
+</li>
+<li><p>也可以点击<strong>Analyze</strong>查看更多信息：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210714214039.png" alt="20210714214039"></p>
+</li>
+<li><p>最后将PP移动至Main:<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210714214715.png" alt="20210714214715"></p>
+</li>
+<li><p>或者到程序编辑器<strong>调试</strong>里面将PP移至main:<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210714214857.png" alt="20210714214857"></p>
 </li>
 </ol>
 <h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210710133116.png" alt="20210710133116"></p>
