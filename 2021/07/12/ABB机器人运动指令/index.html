@@ -48,8 +48,17 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724112752.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724120226.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/pcImages/20210724115958.gif">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724191301.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724191647.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724193351.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724193621.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724194302.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/pcImages/20210724194549.gif">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724195022.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724200106.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/pcImages/20210724200535.gif">
 <meta property="article:published_time" content="2021-07-12T02:03:49.000Z">
-<meta property="article:modified_time" content="2021-07-24T05:03:37.341Z">
+<meta property="article:modified_time" content="2021-07-24T13:07:34.283Z">
 <meta property="article:author" content="dusty">
 <meta property="article:tag" content="ABB">
 <meta property="article:tag" content="RAPID">
@@ -142,7 +151,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%BA%E5%99%A8%E4%BA%BA%E8%BF%90%E5%8A%A8%E6%8C%87%E4%BB%A4"><span class="nav-number">1.</span> <span class="nav-text">机器人运动指令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%9D%E5%AF%B9%E4%BD%8D%E7%BD%AE%EF%BC%88MoveAbsJ%EF%BC%89"><span class="nav-number">1.1.</span> <span class="nav-text">绝对位置（MoveAbsJ）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E8%8A%82%E8%BF%90%E5%8A%A8-MoveJ"><span class="nav-number">2.</span> <span class="nav-text">关节运动 (MoveJ)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B4%E7%BA%BF%E8%BF%90%E9%80%81%EF%BC%88MoveL%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">直线运送（MoveL）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IO%E6%8E%A7%E5%88%B6%E6%8C%87%E4%BB%A4"><span class="nav-number">4.</span> <span class="nav-text">IO控制指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B4%E7%BA%BF%E8%BF%90%E5%8A%A8%E6%8E%A7%E5%88%B6"><span class="nav-number">5.</span> <span class="nav-text">直线运动控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Training%EF%BC%9A%E6%AD%A3%E6%96%B9%E5%BD%A2%E8%BF%90%E5%8A%A8"><span class="nav-number">6.</span> <span class="nav-text">Training：正方形运动</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%BA%E5%99%A8%E4%BA%BA%E8%BF%90%E5%8A%A8%E6%8C%87%E4%BB%A4"><span class="nav-number">1.</span> <span class="nav-text">机器人运动指令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%9D%E5%AF%B9%E4%BD%8D%E7%BD%AE%EF%BC%88MoveAbsJ%EF%BC%89"><span class="nav-number">1.1.</span> <span class="nav-text">绝对位置（MoveAbsJ）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E8%8A%82%E8%BF%90%E5%8A%A8-MoveJ"><span class="nav-number">2.</span> <span class="nav-text">关节运动 (MoveJ)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B4%E7%BA%BF%E8%BF%90%E9%80%81%EF%BC%88MoveL%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">直线运送（MoveL）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IO%E6%8E%A7%E5%88%B6%E6%8C%87%E4%BB%A4"><span class="nav-number">4.</span> <span class="nav-text">IO控制指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B4%E7%BA%BF%E8%BF%90%E5%8A%A8%E6%8E%A7%E5%88%B6"><span class="nav-number">5.</span> <span class="nav-text">直线运动控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Training%EF%BC%9A%E6%AD%A3%E6%96%B9%E5%BD%A2%E8%BF%90%E5%8A%A8"><span class="nav-number">6.</span> <span class="nav-text">Training：正方形运动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MoveC%EF%BC%9A%E5%9C%86%E5%BC%A7%E8%BF%90%E5%8A%A8"><span class="nav-number">7.</span> <span class="nav-text">MoveC：圆弧运动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%86%E5%91%A8%E8%BF%90%E5%8A%A8%E6%8E%A7%E5%88%B6"><span class="nav-number">8.</span> <span class="nav-text">圆周运动控制</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -257,7 +266,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-07-24 12:03:37" itemprop="dateModified" datetime="2021-07-24T12:03:37+07:00">2021-07-24</time>
+        <time title="修改时间：2021-07-24 20:07:34" itemprop="dateModified" datetime="2021-07-24T20:07:34+07:00">2021-07-24</time>
       </span>
 
   
@@ -392,7 +401,7 @@
 <p>实际在命名的时候，如果与之前已建立的有重复，会提示，更改名称即可，但有些保留名字如main()是不可以改的。<br>模块，例行程序，程序数据以及其作用域后续弄清楚了再Update.</p>
 </blockquote>
 </li>
-<li><p>main()是主程序，在main()中调用**(ProCall)**其它3个例行程序：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724102646.png" alt="20210724102646"></p>
+<li><p>main()是主程序，在main()中调用<code>ProCall</code>其它3个例行程序：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724102646.png" alt="20210724102646"></p>
 <blockquote>
 <p>在<code>ENDIF</code>下一行插入<code>WaitTime 1;</code>，先选点击<code>IF</code>来选中整个IF程序块，再在这个程序块后插入WaitTime指令。</p>
 </blockquote>
@@ -423,6 +432,30 @@
 </blockquote>
 <p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724120226.png" alt="20210724120226"></p>
 <p><strong>结果演示</strong>:<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/pcImages/20210724115958.gif" alt="MoveL4"></p>
+<h2 id="MoveC：圆弧运动"><a href="#MoveC：圆弧运动" class="headerlink" title="MoveC：圆弧运动"></a>MoveC：圆弧运动</h2><p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724191301.png" alt="20210724191301"></p>
+<p>需要三个点确定一个圆弧运动：起点<code>p10</code>,终点<code>p40</code>,曲率<code>p30</code>.</p>
+<p><strong>示例1</strong>：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724191647.png" alt="20210724191647"></p>
+<p>要求：默认点为pHome,让机器人从P10，经过P20，到P30结束，后回到pHome.</p>
+<ol>
+<li>在俯视视图下，使用手动线性模式拖动<strong>SpintecTool</strong>的顶部到起点<code>P10</code>.由于圆弧起点被遮挡，可以先右击<strong>SpinterTool</strong>,反选<strong>可见</strong>，调整完成后，再到左侧面板将<strong>SpintecTool</strong>设置为可见即可：</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724193351.png" alt="20210724193351"></p>
+<ol start="2">
+<li><p>修改<code>rMoveRoutine()</code>例行程序：点击例行程序中的程序数据<code>p10</code>,在点击<strong>修改位置</strong>，即可更新<code>p10</code>为圆弧起点：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724193621.png" alt="20210724193621"></p>
+</li>
+<li><p>依次修改其它语句，完成后步进调试例行程序<code>rMoveRoutine()</code>：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724194302.png" alt="20210724194302"></p>
+</li>
+</ol>
+<p><strong>结果演示</strong>：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/pcImages/20210724194549.gif"></p>
+<h2 id="圆周运动控制"><a href="#圆周运动控制" class="headerlink" title="圆周运动控制"></a>圆周运动控制</h2><p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724195022.png" alt="20210724195022"></p>
+<p><strong>要求</strong>：默认点pHome,起始点P10,经过P20,P30,P40，回到P10,最后再回到pHome.</p>
+<p>**修改<code>rMoveRoutine()</code>**程序如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724200106.png" alt="20210724200106"></p>
+<p><strong>圆弧运动<code>MoveC()</code>一般步超过240°，一个完成的圆，至少需要两条圆弧指令来完成。（一个圆被分的圆弧越多越圆？）</strong></p>
+<p><strong>结果演示</strong>：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/pcImages/20210724200535.gif"></p>
 
     </div>
 
