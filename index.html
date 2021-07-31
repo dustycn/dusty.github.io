@@ -93,7 +93,7 @@
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">8</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档<span class="badge">11</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档<span class="badge">13</span></a></li>
   </ul>
 </nav>
 
@@ -140,7 +140,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -206,7 +206,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://dustycn.github.io/2021/07/12/ABB%E6%9C%BA%E5%99%A8%E4%BA%BA%E8%BF%90%E5%8A%A8%E6%8C%87%E4%BB%A4/">
+    <link itemprop="mainEntityOfPage" href="http://dustycn.github.io/2021/07/31/ABB%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AE%89%E8%A3%85/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -219,7 +219,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/07/12/ABB%E6%9C%BA%E5%99%A8%E4%BA%BA%E8%BF%90%E5%8A%A8%E6%8C%87%E4%BB%A4/" class="post-title-link" itemprop="url">ABB机器人运动指令</a>
+          <a href="/2021/07/31/ABB%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AE%89%E8%A3%85/" class="post-title-link" itemprop="url">ABB机器人安装</a>
         </h2>
 
         <div class="post-meta-container">
@@ -229,16 +229,10 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-07-12 09:03:49" itemprop="dateCreated datePublished" datetime="2021-07-12T09:03:49+07:00">2021-07-12</time>
+      <time title="创建时间：2021-07-31 09:41:21 / 修改时间：11:10:19" itemprop="dateCreated datePublished" datetime="2021-07-31T09:41:21+07:00">2021-07-31</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-07-24 20:07:34" itemprop="dateModified" datetime="2021-07-24T20:07:34+07:00">2021-07-24</time>
-      </span>
 
   
   
@@ -249,8 +243,8 @@
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2021/07/12/ABB%E6%9C%BA%E5%99%A8%E4%BA%BA%E8%BF%90%E5%8A%A8%E6%8C%87%E4%BB%A4/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/07/12/ABB机器人运动指令/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2021/07/31/ABB%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AE%89%E8%A3%85/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/07/31/ABB机器人安装/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -264,169 +258,97 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="机器人运动指令"><a href="#机器人运动指令" class="headerlink" title="机器人运动指令"></a>机器人运动指令</h2><table>
-<thead>
-<tr>
-<th align="right">运动控制</th>
-<th align="left">指令</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="right">绝对位置运动</td>
-<td align="left">MOVAbsJ</td>
-</tr>
-<tr>
-<td align="right">关节运动</td>
-<td align="left">MOVJ</td>
-</tr>
-<tr>
-<td align="right">直线运动</td>
-<td align="left">MOVL</td>
-</tr>
-<tr>
-<td align="right">圆弧运动</td>
-<td align="left">MOVC</td>
-</tr>
-</tbody></table>
-<h3 id="绝对位置（MoveAbsJ）"><a href="#绝对位置（MoveAbsJ）" class="headerlink" title="绝对位置（MoveAbsJ）"></a>绝对位置（MoveAbsJ）</h3><p>绝对位置运动指令是机器人使用6个轴和外轴的角度值来定义目标位置数据：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210714115506.png" alt="20210714115506"></p>
+          <h2 id="控制柜接线"><a href="#控制柜接线" class="headerlink" title="控制柜接线"></a>控制柜接线</h2><p>主要是类线：电源线和信号线：</p>
 <table>
 <thead>
 <tr>
-<th align="right">参数</th>
-<th align="left">含义</th>
+<th align="right">线缆</th>
+<th align="center">控制柜连接点</th>
+<th align="left">机器人连接点</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="right">*</td>
-<td align="left">目标点位置数据</td>
+<td align="right">电源线</td>
+<td align="center">XS1</td>
+<td align="left">R1.MP</td>
 </tr>
 <tr>
-<td align="right">v1000</td>
-<td align="left">运动速度数据，1000mm/s</td>
-</tr>
-<tr>
-<td align="right">z50</td>
-<td align="left">转弯区数据</td>
-</tr>
-<tr>
-<td align="right">tool1</td>
-<td align="left">工具坐标数据</td>
-</tr>
-<tr>
-<td align="right">wobj1</td>
-<td align="left">工件坐标数据</td>
+<td align="right">信号线</td>
+<td align="center">XS2</td>
+<td align="left">R1.SMB</td>
 </tr>
 </tbody></table>
-<ol>
-<li><p>点击*号，在新页面中点击<strong>表达式</strong>，点击<strong>编辑</strong>：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210715162840.png" alt="20210715162840"></p>
-</li>
-<li><p>点击<strong>仅限选定内容</strong>，将第一个列表中的元素全部改成0，点击<strong>确定</strong>回到程序编辑界面，将程序指针移动到该语句（在<strong>调试</strong>菜单下可以操作），启动电机，按压示教器运行按钮，执行程序，完成后，急切人回回到机械零点：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210715163324.png" alt="20210715163324"></p>
-</li>
-</ol>
-<h2 id="关节运动-MoveJ"><a href="#关节运动-MoveJ" class="headerlink" title="关节运动 (MoveJ)"></a>关节运动 (MoveJ)</h2><p>关节运动是MoveJ是在路径精度要求不高的情况下，机器人的工具中心点TCP从一个位置移动到另一个位置，两个位置间的移动路径不一定是直线：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210723133311.png" alt="20210723133311"></p>
-<h2 id="直线运送（MoveL）"><a href="#直线运送（MoveL）" class="headerlink" title="直线运送（MoveL）"></a>直线运送（MoveL）</h2><p>线性运动是机器人的TCP从起点到终点之间的路径始终保持为直线。一般如焊接，涂胶等应用对路径要求高的场合使用此指令：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210723133632.png" alt="20210723133632"></p>
-<p><strong>Z50与fine</strong>的区别：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MoveL P10, V100, Z50, tool1&#x2F;Wobj1;</span><br><span class="line">MoveL P20, V100, fine, tool1&#x2F;Wobj1;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>在接近P10的时候，Z50逼近但不靠近，形成半径50mm转弯曲线，但fine是精确达到：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210723134403.png" alt="20210723134403"></p>
-<h2 id="IO控制指令"><a href="#IO控制指令" class="headerlink" title="IO控制指令"></a>IO控制指令</h2><p>IO控制指令用于控制IO信号，以达到与机器人周边设备进行通信的目的：</p>
+<p>实物图参考：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210731095811.png" alt="20210731095811"></p>
+<p>控制柜连接到手臂底座上，上臂有接口与底座连通：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210731100009.png" alt="20210731100009"></p>
 <table>
 <thead>
 <tr>
-<th align="center">IO指令</th>
+<th align="right">位置</th>
+<th align="center">编号</th>
+<th align="center">类型</th>
+<th align="left">参数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">A</td>
+<td align="center">10</td>
+<td align="center">电力/信号</td>
+<td align="left">49V/500mA</td>
+</tr>
+<tr>
+<td align="right">B</td>
+<td align="center">4</td>
+<td align="center">气动</td>
+<td align="left">最大5bar 内径4mm</td>
+</tr>
+</tbody></table>
+<h2 id="开机"><a href="#开机" class="headerlink" title="开机"></a>开机</h2><p>电源开关打到垂直方向，等待示教器启动完成后再操作：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210731100849.png" alt="20210731100849"></p>
+<h2 id="关机"><a href="#关机" class="headerlink" title="关机"></a>关机</h2><p>示教器中选择<strong>重新启动</strong>：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210731101046.png" alt="20210731101046"></p>
+<p>选择<strong>高级</strong>：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210731101140.png" alt="20210731101140"></p>
+<p>选择<strong>关闭主计算机</strong>：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210731101255.png" alt="20210731101255"></p>
+<blockquote>
+<p>再关闭电源开关，有点类似电脑关机流程。</p>
+</blockquote>
+<h2 id="重新启动"><a href="#重新启动" class="headerlink" title="重新启动"></a>重新启动</h2><p>ABB机器人系统可以长时间无人操作，无需定期重启，但以下情况需要重启：</p>
+<ul>
+<li>安装了新的硬件；</li>
+<li>更改了机器人系统配置参数；</li>
+<li>出现系统故障(SYSFAIL);</li>
+<li>RAPID程序出现程序故障；</li>
+</ul>
+<p>重启类型如下表：</p>
+<table>
+<thead>
+<tr>
+<th align="right">高级重启选项</th>
+<th align="center">重启类型</th>
 <th align="left">说明</th>
-<th align="left">用途</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">Set</td>
-<td align="left">数字信号置位指令</td>
-<td align="left">用于将 Digital Output 数字输出置位为1</td>
+<td align="right">重启</td>
+<td align="center">热启动</td>
+<td align="left">使用当前的设置重新启动当前系统</td>
 </tr>
 <tr>
-<td align="center">Reset</td>
-<td align="left">数字信号复位指令</td>
-<td align="left">用于将 Digital Output 数字输出置位为0</td>
+<td align="right">重置系统</td>
+<td align="center">I-启动</td>
+<td align="left">重启并将机器人系统恢复到出厂状态</td>
 </tr>
 <tr>
-<td align="center">ProCall</td>
-<td align="left">调用例行程序指令</td>
-<td align="left">在程序中指定的位置调用例行程序</td>
+<td align="right">重置RAPID</td>
+<td align="center">P-启动</td>
+<td align="left">重启并将用户加载的RAPID程序全部删除</td>
 </tr>
 <tr>
-<td align="center">RETURN</td>
-<td align="left">返回例行程序指令</td>
-<td align="left">返回例行程序到调用此例行程序的位置</td>
+<td align="right">恢复到上次自动保存的状态</td>
+<td align="center">B-启动</td>
+<td align="left">重启并尝试回到上一次的无错状态，一般出现系统故障时使用</td>
 </tr>
 </tbody></table>
-<h2 id="直线运动控制"><a href="#直线运动控制" class="headerlink" title="直线运动控制"></a>直线运动控制</h2><p><strong>要求</strong>：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724110653.png" alt="20210724110653"></p>
-<blockquote>
-<p>机器默认位置为<code>pHome</code>, 启动程序后，机器人沿桌子边缘从<code>P10</code>到<code>P20</code>往复<strong>直线</strong>运动。</p>
-</blockquote>
-<ol>
-<li><p>在MainModule1下新建4个例行程序：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724100544.png" alt="20210724100544"></p>
-<blockquote>
-<p>实际在命名的时候，如果与之前已建立的有重复，会提示，更改名称即可，但有些保留名字如main()是不可以改的。<br>模块，例行程序，程序数据以及其作用域后续弄清楚了再Update.</p>
-</blockquote>
-</li>
-<li><p>main()是主程序，在main()中调用<code>ProCall</code>其它3个例行程序：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724102646.png" alt="20210724102646"></p>
-<blockquote>
-<p>在<code>ENDIF</code>下一行插入<code>WaitTime 1;</code>，先选点击<code>IF</code>来选中整个IF程序块，再在这个程序块后插入WaitTime指令。</p>
-</blockquote>
-<p>1.例行程序<code>rInitAll()</code>:初始化两条速度控制指令：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724103549.png" alt="20210724103549"></p>
-<p>2.例行程序<code>rMoveRoutine()</code>:<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724104139.png" alt="20210724104139"></p>
-<p>3.例行程序<code>rHome()</code>:<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724104321.png" alt="20210724104321"></p>
-</li>
-<li><p>调试例行程序，以<code>rMoveRoutine()</code>为列：</p>
-<ol>
-<li><p>在<strong>调试</strong>菜单下，将<strong>PP移至例行程序—</strong>:<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724105306.png" alt="20210724105306"></p>
-</li>
-<li><p>选择<strong>rMoveRoutine</strong>例行程序，然后按压<kbd>步进执行程序</kbd>按钮,观察机器人是否按照预期动作：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724110245.png" alt="20210724110245"></p>
-</li>
-<li><p>调试的过程中如果提示<strong>未定义载荷</strong>错误：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724094154.png" alt="20210724094154"></p>
-</li>
-</ol>
-<p>可以按照提示先随便修改一个值好调试通过：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724094447.png" alt="20210724094447"></p>
-</li>
-<li><p>3个示例程序完成后，调试<code>main()</code>,直接启动程序即可：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/pcImages/20210724114424.gif" alt="MoveL"></p>
-</li>
-</ol>
-<h2 id="Training：正方形运动"><a href="#Training：正方形运动" class="headerlink" title="Training：正方形运动"></a>Training：正方形运动</h2><p><strong>要求</strong>：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724112752.png" alt="20210724112752"></p>
-<blockquote>
-<p>机器人默认位置<code>pHome</code>,启动程序后，机器人从默认位置到<code>P10</code>,再依次直线经过<code>P20</code>,<code>P30</code>,<code>P40</code>,回到<code>P10</code>,结束后回到<code>pHome</code>.</p>
-</blockquote>
-<blockquote>
-<p>只需要变更上面程序的<code>rMoveRoute</code>,将<code>P20</code>改成P40，再增加<code>P30</code>,<code>P40</code>程序数据<code>robtarget</code>即可。</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724120226.png" alt="20210724120226"></p>
-<p><strong>结果演示</strong>:<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/pcImages/20210724115958.gif" alt="MoveL4"></p>
-<h2 id="MoveC：圆弧运动"><a href="#MoveC：圆弧运动" class="headerlink" title="MoveC：圆弧运动"></a>MoveC：圆弧运动</h2><p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724191301.png" alt="20210724191301"></p>
-<p>需要三个点确定一个圆弧运动：起点<code>p10</code>,终点<code>p40</code>,曲率<code>p30</code>.</p>
-<p><strong>示例1</strong>：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724191647.png" alt="20210724191647"></p>
-<p>要求：默认点为pHome,让机器人从P10，经过P20，到P30结束，后回到pHome.</p>
-<ol>
-<li>在俯视视图下，使用手动线性模式拖动<strong>SpintecTool</strong>的顶部到起点<code>P10</code>.由于圆弧起点被遮挡，可以先右击<strong>SpinterTool</strong>,反选<strong>可见</strong>，调整完成后，再到左侧面板将<strong>SpintecTool</strong>设置为可见即可：</li>
-</ol>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724193351.png" alt="20210724193351"></p>
-<ol start="2">
-<li><p>修改<code>rMoveRoutine()</code>例行程序：点击例行程序中的程序数据<code>p10</code>,在点击<strong>修改位置</strong>，即可更新<code>p10</code>为圆弧起点：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724193621.png" alt="20210724193621"></p>
-</li>
-<li><p>依次修改其它语句，完成后步进调试例行程序<code>rMoveRoutine()</code>：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724194302.png" alt="20210724194302"></p>
-</li>
-</ol>
-<p><strong>结果演示</strong>：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/pcImages/20210724194549.gif"></p>
-<h2 id="圆周运动控制"><a href="#圆周运动控制" class="headerlink" title="圆周运动控制"></a>圆周运动控制</h2><p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724195022.png" alt="20210724195022"></p>
-<p><strong>要求</strong>：默认点pHome,起始点P10,经过P20,P30,P40，回到P10,最后再回到pHome.</p>
-<p>**修改<code>rMoveRoutine()</code>**程序如下：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724200106.png" alt="20210724200106"></p>
-<p><strong>圆弧运动<code>MoveC()</code>一般步超过240°，一个完成的圆，至少需要两条圆弧指令来完成。（一个圆被分的圆弧越多越圆？）</strong></p>
-<p><strong>结果演示</strong>：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/pcImages/20210724200535.gif"></p>
+<p>菜单主界面的<strong>重新启动</strong>为热启动：使用当前的设置重新启动当前系统：</p>
 
       
     </div>
@@ -446,7 +368,7 @@
 
 
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>

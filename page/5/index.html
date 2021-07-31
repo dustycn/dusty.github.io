@@ -93,7 +93,7 @@
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">8</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档<span class="badge">11</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档<span class="badge">13</span></a></li>
   </ul>
 </nav>
 
@@ -140,7 +140,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -206,7 +206,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://dustycn.github.io/2021/07/06/ABB-RAPID-%E7%A8%8B%E5%BA%8F%E4%BB%A5%E5%8F%8A%E6%8C%87%E4%BB%A4/">
+    <link itemprop="mainEntityOfPage" href="http://dustycn.github.io/2021/07/07/RobotStudio%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%BE%91RAPID%E7%A8%8B%E5%BA%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -219,7 +219,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/07/06/ABB-RAPID-%E7%A8%8B%E5%BA%8F%E4%BB%A5%E5%8F%8A%E6%8C%87%E4%BB%A4/" class="post-title-link" itemprop="url">ABB RAPID 程序以及指令</a>
+          <a href="/2021/07/07/RobotStudio%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%BE%91RAPID%E7%A8%8B%E5%BA%8F/" class="post-title-link" itemprop="url">RobotStudio在线编辑RAPID程序</a>
         </h2>
 
         <div class="post-meta-container">
@@ -229,16 +229,10 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-07-06 12:46:19" itemprop="dateCreated datePublished" datetime="2021-07-06T12:46:19+07:00">2021-07-06</time>
+      <time title="创建时间：2021-07-07 14:10:06 / 修改时间：14:42:51" itemprop="dateCreated datePublished" datetime="2021-07-07T14:10:06+07:00">2021-07-07</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-07-14 21:17:00" itemprop="dateModified" datetime="2021-07-14T21:17:00+07:00">2021-07-14</time>
-      </span>
 
   
   
@@ -249,8 +243,8 @@
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2021/07/06/ABB-RAPID-%E7%A8%8B%E5%BA%8F%E4%BB%A5%E5%8F%8A%E6%8C%87%E4%BB%A4/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/07/06/ABB-RAPID-程序以及指令/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2021/07/07/RobotStudio%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%BE%91RAPID%E7%A8%8B%E5%BA%8F/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/07/07/RobotStudio在线编辑RAPID程序/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -264,40 +258,45 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="什么是RAPID"><a href="#什么是RAPID" class="headerlink" title="什么是RAPID"></a>什么是RAPID</h2><p>RAPID 是 ABB 机器人使用的编程语言，RAPID程序架构：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210706125329.png" alt="20210706125329"></p>
-<h2 id="RAPID程序编辑"><a href="#RAPID程序编辑" class="headerlink" title="RAPID程序编辑"></a>RAPID程序编辑</h2><ol>
-<li><p>打开ABB菜单后，单击<strong>程序编辑器</strong>，查看RAPID程序：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210706125609.png" alt="20210706125609"></p>
+          <h2 id="连接机器人"><a href="#连接机器人" class="headerlink" title="连接机器人"></a>连接机器人</h2><ol>
+<li><p>使用网线将计算机与机器人连接，计算机的IP设定为自动获取；</p>
 </li>
-<li><p>单击<strong>例行程序</strong>，查看例行程序列表：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210706125920.png" alt="20210706125920"></p>
+<li><p>在RobotStudio的<strong>添加控制器</strong>选项卡下，选择<strong>一键连接</strong>；<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707141744.png" alt="20210707141744"></p>
 </li>
-<li><p>切换到*<strong>模块列表</strong>：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210706130326.png" alt="20210706130326"></p>
+<li><p>连接上后，将机器人状态钥匙开关切换到手动，点击<strong>请求写权限</strong>：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707141937.png" alt="20210707141937"></p>
 </li>
-</ol>
-<ul>
-<li>CallPos: 例行程序</li>
-<li>CurrentPos: 功能</li>
-<li>MAIN: 主程序</li>
-<li>tIOControl: 中断程序  </li>
-</ul>
-<ol start="4">
-<li><p>程序模块有2个：CalibData,Module1.系统模块有3个：BASE，LINKEDM,user:<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210706132301.png" alt="20210706132301"></p>
+<li><p>在示教器上确认即可；</p>
 </li>
-<li><p>程序编辑界面：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210706132602.png" alt="20210706132602"></p>
+<li><p>程式修改完成，在示教器上点击撤回，收回写权限；</p>
 </li>
 </ol>
-<p>常用RAPID指令：</p>
-<ul>
-<li>赋值指令</li>
-<li>机器人运动指令</li>
-<li>I/O控制指令</li>
-<li>条件逻辑判断指令</li>
-</ul>
-<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><blockquote>
-<p>ABB RAPID程序似乎是由一个一个程序模块组成的。</p>
-</blockquote>
-<blockquote>
-<p>手动模式下才可以编辑程序。</p>
-</blockquote>
+<h2 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h2><p><strong>为防止修改出错，请在修改前创建备份</strong></p>
+<ol>
+<li><p>RobotStudio点击<strong>备份</strong>，创建备份：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707142558.png" alt="20210707142558"></p>
+</li>
+<li><p>填写备份名称以及存储的位置，注意备份名称中不能有中文；</p>
+</li>
+<li><p>备份完成后，会提示操作完成；</p>
+</li>
+</ol>
+<h2 id="恢复备份"><a href="#恢复备份" class="headerlink" title="恢复备份"></a>恢复备份</h2><ol>
+<li>与机器人建立连接，切换到手动，请求写权限，点检<strong>备份</strong>，选择从<strong>备份中恢复</strong>：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707142955.png" alt="20210707142955"></li>
+</ol>
+<h2 id="在线编辑RAPID"><a href="#在线编辑RAPID" class="headerlink" title="在线编辑RAPID"></a>在线编辑RAPID</h2><ol>
+<li>连上机器人，切换到手动，请求写权限；</li>
+<li>找到需要编辑的文件，编辑完成后，单击<strong>应用</strong>即可；<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707143426.png" alt="20210707143426"></li>
+<li>修改后，点击<strong>收回写权限</strong>。</li>
+</ol>
+<h2 id="在线编辑I-O信息"><a href="#在线编辑I-O信息" class="headerlink" title="在线编辑I/O信息"></a>在线编辑I/O信息</h2><ol>
+<li><p>连上机器人，切换到手动，请求写权限；</p>
+</li>
+<li><p>在<strong>控制器</strong>选项卡中，选择<strong>配置编辑器</strong>中的<strong>I/O System</strong>:<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707143728.png" alt="20210707143728"></p>
+</li>
+<li><p>在<strong>DeviceNet device</strong>上单击右键，选择<strong>新建DeviceNet device…</strong>:<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707143951.png" alt="20210707143951"></p>
+</li>
+<li><p>新建或者修改完成后，单击<strong>重启</strong>，选择<strong>热启动</strong>，才能使设定生效：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707144236.png" alt="20210707144236"></p>
+</li>
+</ol>
 
       
     </div>
@@ -317,7 +316,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>
