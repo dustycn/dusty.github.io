@@ -21,21 +21,22 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"dustycn.github.io","root":"/","images":"/images","scheme":"Mist","version":"8.6.1","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="控制柜接线主要是类线：电源线和信号线：    线缆 控制柜连接点 机器人连接点    电源线 XS1 R1.MP   信号线 XS2 R1.SMB   实物图参考：  控制柜连接到手臂底座上，上臂有接口与底座连通：     位置 编号 类型 参数    A 10 电力&#x2F;信号 49V&#x2F;500mA   B 4 气动 最大5bar 内径4mm   开机电源开关打到垂直方向，等待示教器启动完成后再操作：">
+<meta name="description" content="控制柜接线主要是类线：电源线和信号线：    线缆 控制柜连接点 机器人连接点    电源线 XS1 R1.MP   信号线 XS2 R1.SMB   实物图参考：   控制柜连接到手臂底座上，上臂有接口与底座连通：     位置 编号 类型 参数    A 10 电力&#x2F;信号 49V&#x2F;500mA   B 4 气动 最大5bar 内径4mm   开机电源开关打到垂直方向，等待示教器启动完成后再操作：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ABB机器人安装">
 <meta property="og:url" content="http://dustycn.github.io/2021/07/31/ABB%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AE%89%E8%A3%85/index.html">
 <meta property="og:site_name" content="dusty@">
-<meta property="og:description" content="控制柜接线主要是类线：电源线和信号线：    线缆 控制柜连接点 机器人连接点    电源线 XS1 R1.MP   信号线 XS2 R1.SMB   实物图参考：  控制柜连接到手臂底座上，上臂有接口与底座连通：     位置 编号 类型 参数    A 10 电力&#x2F;信号 49V&#x2F;500mA   B 4 气动 最大5bar 内径4mm   开机电源开关打到垂直方向，等待示教器启动完成后再操作：">
+<meta property="og:description" content="控制柜接线主要是类线：电源线和信号线：    线缆 控制柜连接点 机器人连接点    电源线 XS1 R1.MP   信号线 XS2 R1.SMB   实物图参考：   控制柜连接到手臂底座上，上臂有接口与底座连通：     位置 编号 类型 参数    A 10 电力&#x2F;信号 49V&#x2F;500mA   B 4 气动 最大5bar 内径4mm   开机电源开关打到垂直方向，等待示教器启动完成后再操作：">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210731095811.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210802180242.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210731100009.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210731100849.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210731101046.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210731101140.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210731101255.png">
 <meta property="article:published_time" content="2021-07-31T02:41:21.000Z">
-<meta property="article:modified_time" content="2021-07-31T04:10:19.690Z">
+<meta property="article:modified_time" content="2021-08-02T11:03:15.861Z">
 <meta property="article:author" content="dusty">
 <meta property="article:tag" content="ABB">
 <meta name="twitter:card" content="summary">
@@ -96,7 +97,7 @@
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">8</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档<span class="badge">13</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">14</span></a></li>
   </ul>
 </nav>
 
@@ -144,7 +145,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -174,6 +175,9 @@
       </span>
       <span class="links-of-author-item">
         <a href="https://dusty.lofter.com/" title="Lofter → https:&#x2F;&#x2F;dusty.lofter.com&#x2F;" rel="noopener" target="_blank"><i class="fas fa-camera fa-fw"></i>Lofter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://zhan.xunlei.com/space/13503091" title="迅雷小站 → https:&#x2F;&#x2F;zhan.xunlei.com&#x2F;space&#x2F;13503091" rel="noopener" target="_blank"><i class="fa-solid fa-download fa-fw"></i>迅雷小站</a>
       </span>
   </div>
 
@@ -234,10 +238,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-07-31 09:41:21 / 修改时间：11:10:19" itemprop="dateCreated datePublished" datetime="2021-07-31T09:41:21+07:00">2021-07-31</time>
+      <time title="创建时间：2021-07-31 09:41:21" itemprop="dateCreated datePublished" datetime="2021-07-31T09:41:21+07:00">2021-07-31</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-08-02 18:03:15" itemprop="dateModified" datetime="2021-08-02T18:03:15+07:00">2021-08-02</time>
+      </span>
 
   
   
@@ -285,6 +295,7 @@
 </tbody></table>
 <p>实物图参考：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210731095811.png" alt="20210731095811"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210802180242.png" alt="20210802180242"></p>
 <p>控制柜连接到手臂底座上，上臂有接口与底座连通：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210731100009.png" alt="20210731100009"></p>
 <table>
@@ -384,6 +395,9 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/2021/07/31/ABB%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9D%90%E6%A0%87%E7%B3%BB%E8%AF%B4%E6%98%8E/" rel="prev" title="ABB机器人坐标系说明">
+                  <i class="fa fa-chevron-left"></i> ABB机器人坐标系说明
+                </a>
             </div>
             <div class="post-nav-item">
                 <a href="/2021/07/31/ABB%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%A0%A1%E5%87%86%EF%BC%9A%E8%BD%AC%E6%95%B0%E8%AE%A1%E6%95%B0%E5%99%A8%E6%9B%B4%E6%96%B0/" rel="next" title="ABB机器人校准：转数计数器更新">

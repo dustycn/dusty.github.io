@@ -21,32 +21,39 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"dustycn.github.io","root":"/","images":"/images","scheme":"Mist","version":"8.6.1","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="什么是 Emoji, BadgesEmoji是指标签符号：❤️🤣🗝️🚀😂Badges是指徽章：  Emoji &amp; Badges来源Emoji：https:&#x2F;&#x2F;emojipedia.org&#x2F;Badges: https:&#x2F;&#x2F;shields.io&#x2F; VS Code插件：VS 扩展库搜索 Emoji 关键词有很多插件可用，试用了几款：  perkovec.emoji：Ctrl+Shift+">
+<meta name="description" content="坐标系示意图 工具坐标系 机器人工具坐标系是由工具中心点TCP与坐标方位组成； 默认的tool0的TCP在6轴上法兰盘的中心位置； 机器人联动运行时，TCP是必须的： Reorient重定位运动（姿态运动）：机器人TCP位置不变，机器人工具沿坐标轴转动，改变姿态。 Linear线性运动：机器人工具姿态不变，TCP沿坐标轴线性运动。   机器人程序支持多个TCP，可以根据当前工作状态进行变换，这样，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在文章中使用Emoji &amp; Badges❤️">
-<meta property="og:url" content="http://dustycn.github.io/2021/07/01/%E5%9C%A8%E6%96%87%E7%AB%A0%E4%B8%AD%E4%BD%BF%E7%94%A8Emoji/index.html">
+<meta property="og:title" content="ABB机器人坐标系说明">
+<meta property="og:url" content="http://dustycn.github.io/2021/07/31/ABB%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9D%90%E6%A0%87%E7%B3%BB%E8%AF%B4%E6%98%8E/index.html">
 <meta property="og:site_name" content="dusty@">
-<meta property="og:description" content="什么是 Emoji, BadgesEmoji是指标签符号：❤️🤣🗝️🚀😂Badges是指徽章：  Emoji &amp; Badges来源Emoji：https:&#x2F;&#x2F;emojipedia.org&#x2F;Badges: https:&#x2F;&#x2F;shields.io&#x2F; VS Code插件：VS 扩展库搜索 Emoji 关键词有很多插件可用，试用了几款：  perkovec.emoji：Ctrl+Shift+">
+<meta property="og:description" content="坐标系示意图 工具坐标系 机器人工具坐标系是由工具中心点TCP与坐标方位组成； 默认的tool0的TCP在6轴上法兰盘的中心位置； 机器人联动运行时，TCP是必须的： Reorient重定位运动（姿态运动）：机器人TCP位置不变，机器人工具沿坐标轴转动，改变姿态。 Linear线性运动：机器人工具姿态不变，TCP沿坐标轴线性运动。   机器人程序支持多个TCP，可以根据当前工作状态进行变换，这样，">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img.shields.io/github/followers/dustycn?style=social">
-<meta property="og:image" content="https://img.shields.io/twitter/follow/dustycn?style=social">
-<meta property="article:published_time" content="2021-07-01T05:11:35.000Z">
-<meta property="article:modified_time" content="2021-07-03T06:30:03.832Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210731124605.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210731125820.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210731130208.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210801201448.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210801201750.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210801201927.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210801202610.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210801211619.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210801212303.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210801212843.png">
+<meta property="article:published_time" content="2021-07-31T05:43:52.000Z">
+<meta property="article:modified_time" content="2021-08-01T14:30:58.378Z">
 <meta property="article:author" content="dusty">
-<meta property="article:tag" content="Emoji">
-<meta property="article:tag" content="Badges">
+<meta property="article:tag" content="ABB">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img.shields.io/github/followers/dustycn?style=social">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210731124605.png">
 
 
-<link rel="canonical" href="http://dustycn.github.io/2021/07/01/%E5%9C%A8%E6%96%87%E7%AB%A0%E4%B8%AD%E4%BD%BF%E7%94%A8Emoji/">
+<link rel="canonical" href="http://dustycn.github.io/2021/07/31/ABB%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9D%90%E6%A0%87%E7%B3%BB%E8%AF%B4%E6%98%8E/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://dustycn.github.io/2021/07/01/%E5%9C%A8%E6%96%87%E7%AB%A0%E4%B8%AD%E4%BD%BF%E7%94%A8Emoji/","path":"2021/07/01/在文章中使用Emoji/","title":"在文章中使用Emoji & Badges❤️"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://dustycn.github.io/2021/07/31/ABB%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9D%90%E6%A0%87%E7%B3%BB%E8%AF%B4%E6%98%8E/","path":"2021/07/31/ABB机器人坐标系说明/","title":"ABB机器人坐标系说明"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>在文章中使用Emoji & Badges❤️ | dusty@</title>
+<title>ABB机器人坐标系说明 | dusty@</title>
   
 
 
@@ -124,7 +131,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-Emoji-Badges"><span class="nav-number">1.</span> <span class="nav-text">什么是 Emoji, Badges</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Emoji-amp-Badges%E6%9D%A5%E6%BA%90"><span class="nav-number">2.</span> <span class="nav-text">Emoji &amp; Badges来源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VS-Code%E6%8F%92%E4%BB%B6%EF%BC%9A"><span class="nav-number">3.</span> <span class="nav-text">VS Code插件：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Summary"><span class="nav-number">4.</span> <span class="nav-text">Summary</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9D%90%E6%A0%87%E7%B3%BB%E7%A4%BA%E6%84%8F%E5%9B%BE"><span class="nav-number">1.</span> <span class="nav-text">坐标系示意图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="nav-number">2.</span> <span class="nav-text">工具坐标系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8D%E5%90%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E5%B7%A5%E5%85%B7%E5%9D%90%E6%A0%87%E7%A4%BA%E4%BE%8B%EF%BC%9A"><span class="nav-number">2.1.</span> <span class="nav-text">不同工具的工具坐标示例：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E4%BB%B6%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="nav-number">3.</span> <span class="nav-text">工件坐标系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E8%BF%90%E5%8A%A8-Linear-%E6%A8%A1%E5%BC%8F%E4%B8%8B%E7%9A%84%E5%9D%90%E6%A0%87%E7%B3%BB%E9%80%89%E6%8B%A9"><span class="nav-number">4.</span> <span class="nav-text">线性运动(Linear)模式下的坐标系选择</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -211,7 +218,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://dustycn.github.io/2021/07/01/%E5%9C%A8%E6%96%87%E7%AB%A0%E4%B8%AD%E4%BD%BF%E7%94%A8Emoji/">
+    <link itemprop="mainEntityOfPage" href="http://dustycn.github.io/2021/07/31/ABB%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9D%90%E6%A0%87%E7%B3%BB%E8%AF%B4%E6%98%8E/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -224,7 +231,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          在文章中使用Emoji & Badges❤️
+          ABB机器人坐标系说明
         </h1>
 
         <div class="post-meta-container">
@@ -235,14 +242,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-07-01 12:11:35" itemprop="dateCreated datePublished" datetime="2021-07-01T12:11:35+07:00">2021-07-01</time>
+      <time title="创建时间：2021-07-31 12:43:52" itemprop="dateCreated datePublished" datetime="2021-07-31T12:43:52+07:00">2021-07-31</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-07-03 13:30:03" itemprop="dateModified" datetime="2021-07-03T13:30:03+07:00">2021-07-03</time>
+        <time title="修改时间：2021-08-01 21:30:58" itemprop="dateModified" datetime="2021-08-01T21:30:58+07:00">2021-08-01</time>
       </span>
 
   
@@ -254,8 +261,8 @@
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2021/07/01/%E5%9C%A8%E6%96%87%E7%AB%A0%E4%B8%AD%E4%BD%BF%E7%94%A8Emoji/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/07/01/在文章中使用Emoji/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2021/07/31/ABB%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9D%90%E6%A0%87%E7%B3%BB%E8%AF%B4%E6%98%8E/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/07/31/ABB机器人坐标系说明/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -269,22 +276,70 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="什么是-Emoji-Badges"><a href="#什么是-Emoji-Badges" class="headerlink" title="什么是 Emoji, Badges"></a>什么是 Emoji, Badges</h2><p>Emoji是指标签符号：❤️🤣🗝️🚀😂<br>Badges是指徽章：</p>
-<p><img src="https://img.shields.io/github/followers/dustycn?style=social" alt="GitHub followers"><br><img src="https://img.shields.io/twitter/follow/dustycn?style=social" alt="Twitter Follow"></p>
-<h2 id="Emoji-amp-Badges来源"><a href="#Emoji-amp-Badges来源" class="headerlink" title="Emoji &amp; Badges来源"></a>Emoji &amp; Badges来源</h2><p>Emoji：<a target="_blank" rel="noopener" href="https://emojipedia.org/">https://emojipedia.org/</a><br>Badges: <a target="_blank" rel="noopener" href="https://shields.io/">https://shields.io/</a></p>
-<h2 id="VS-Code插件："><a href="#VS-Code插件：" class="headerlink" title="VS Code插件："></a>VS Code插件：</h2><p>VS 扩展库搜索 Emoji 关键词有很多插件可用，试用了几款：</p>
+        <h2 id="坐标系示意图"><a href="#坐标系示意图" class="headerlink" title="坐标系示意图"></a>坐标系示意图</h2><p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210731124605.png" alt="20210731124605"></p>
+<h2 id="工具坐标系"><a href="#工具坐标系" class="headerlink" title="工具坐标系"></a>工具坐标系</h2><ul>
+<li>机器人工具坐标系是由工具中心点TCP与坐标方位组成；</li>
+<li>默认的tool0的TCP在6轴上法兰盘的中心位置；</li>
+<li>机器人联动运行时，TCP是必须的：<ul>
+<li>Reorient重定位运动（姿态运动）：机器人TCP位置不变，机器人工具沿坐标轴转动，改变姿态。</li>
+<li>Linear线性运动：机器人工具姿态不变，TCP沿坐标轴线性运动。</li>
+</ul>
+</li>
+<li>机器人程序支持多个TCP，可以根据当前工作状态进行变换，这样，当机器人的工具被更换后，可以步变更程序，直接运行。</li>
+<li>在TCP与基准点靠上的情况下使用重定位（姿态运动）模式来检验工具坐标系设定的效果。（所以重定位是用来干这个的？）</li>
+</ul>
+<h3 id="不同工具的工具坐标示例："><a href="#不同工具的工具坐标示例：" class="headerlink" title="不同工具的工具坐标示例："></a>不同工具的工具坐标示例：</h3><p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210731125820.png" alt="20210731125820"></p>
+<blockquote>
+<p>感觉TCP点一般在工具的末端或者中心，不要求很精确。</p>
+</blockquote>
+<p>tPen坐标系相对tool0的TCP偏移：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210731130208.png" alt="20210731130208"></p>
+<h2 id="工件坐标系"><a href="#工件坐标系" class="headerlink" title="工件坐标系"></a>工件坐标系</h2><ul>
+<li>机器人工件坐标系是由工件原点与坐标方位组成；</li>
+<li>机器人程序支持多个Wobj,可以根据当前工作状态进行变换；</li>
+<li>当外部夹具被更换，使用对应的Wobj，可以不更改程序，直接运行；</li>
+</ul>
+<p>通过不同的工具坐标以及工件坐标的组合复用，可以换线换治具的时候不用更改程序。</p>
+<h2 id="线性运动-Linear-模式下的坐标系选择"><a href="#线性运动-Linear-模式下的坐标系选择" class="headerlink" title="线性运动(Linear)模式下的坐标系选择"></a>线性运动(Linear)模式下的坐标系选择</h2><p>动作模式为轴运动的时候，坐标系只能是<strong>基坐标</strong>，灰色不可选择：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210801201448.png" alt="20210801201448"></p>
+<p>切换动作为<strong>线性</strong>后，既可以选择：</p>
+<ul>
+<li>大地坐标；</li>
+<li>基坐标；</li>
+<li>工具；</li>
+<li>工件坐标；</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210801201750.png" alt="20210801201750"></p>
 <ol>
-<li>perkovec.emoji：Ctrl+Shift+P，再Key <code>emoji</code> 搜索关键字插入；</li>
-<li>alexzshl.badges-snippets ：用于调用shields.io的资源；</li>
-<li>devzstudio.emoji-snippets ：不仅可以用于Markdown，还能用于其它编程语言；</li>
+<li><strong>坐标系</strong>选择<strong>基坐标</strong>的时机：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210801201927.png" alt="20210801201927"></li>
 </ol>
-<p>后两者需要开启Markdown快速建议，具体操作是：</p>
-<p>Ctrl+. 打开设置，搜索 quick suggestions ,然后编辑settings.json,加入：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&quot;[markdown]&quot;: &#123;</span><br><span class="line">    &quot;editor.quickSuggestions&quot;:&#123;</span><br><span class="line">        &quot;other&quot;:true,</span><br><span class="line">        &quot;comments&quot;:true,</span><br><span class="line">        &quot;strings&quot;:true,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-<p>实际测试，发现直接加入如下代码即可：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">    &quot;[markdown]&quot;: &#123;</span><br><span class="line">        &quot;editor.quickSuggestions&quot;: ture    </span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>但是，在Markdown里面开启快速建议，实际体验很不优雅，干扰纯净的写作体验，违背了Markdown的初衷，所以，最后卸载了所有插件，改用Window自带的Emoji插入，需要Badges的时候，自己上shields.io上制作，并保留代码，后续复制粘贴即可.</p>
-<p>Windows快速开启Emoji快捷键： Win+. ❤️<br>还可以插入颜文字(●’◡’●)各种符号®,甚至GIF.  </p>
+<blockquote>
+<p>当需要将可预测的运动轻而易举的转化为控制杆的运动时，可以在基坐标系中进行控制。在许多情况下，极坐标系是使用最为方便的一种坐标系，因为它对工具，工件或其它机械单元没有依赖性。</p>
+</blockquote>
+<ol start="2">
+<li><strong>坐标系</strong>选择<strong>大地坐标</strong>的时机：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210801202610.png" alt="20210801202610"></li>
+</ol>
+<blockquote>
+<p>例如，有两个机器人，一个安装于地面，一个倒置，倒置的机器人的基坐标系也将颠倒。如果在倒置机器人的基坐标系中进行控制，则很难预测移动情况。此时可以选择共享大地坐标系。</p>
+</blockquote>
+<ol start="3">
+<li><strong>坐标系</strong>选择<strong>工件坐标</strong>的时机：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210801211619.png" alt="20210801211619"></li>
+</ol>
+<blockquote>
+<p>例如，你打算确定一系列孔的位置，以便沿着工件边缘钻孔。你打算在工件箱的两面隔板之间焊接。<br>需要指定<strong>工件坐标</strong>，<strong>工具坐标</strong>，<strong>有效载荷</strong>。</p>
+</blockquote>
+<ol start="4">
+<li><strong>坐标系</strong>选择<strong>工具</strong>的时机：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210801212303.png" alt="20210801212303"></li>
+</ol>
+<blockquote>
+<p>使用工具体系对穿，钻，铣，锯等进行编程和调整时。  </p>
+</blockquote>
+<blockquote>
+<p>只需要指定<strong>工具坐标</strong>。</p>
+</blockquote>
+<p>目前还不知道在坐标系里面选择的<strong>工具</strong>（或工件坐标），跟工具坐标里面选择的工具坐标的差异：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210801212843.png" alt="20210801212843"></p>
+<p>目前的理解应该是为了提高精度？焊接和钻孔要特别强调工件坐标，穿，钻，铣，锯对工具要求多用工具坐标，如果对精度要求不高，不选也没有关系？</p>
 
     </div>
 
@@ -308,21 +363,17 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/Emoji/" rel="tag"># Emoji</a>
-              <a href="/tags/Badges/" rel="tag"># Badges</a>
+              <a href="/tags/ABB/" rel="tag"># ABB</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/07/05/ABB-RAPID-%E7%A8%8B%E5%BA%8F%E6%95%B0%E6%8D%AE/" rel="prev" title="ABB RAPID 程序数据">
-                  <i class="fa fa-chevron-left"></i> ABB RAPID 程序数据
-                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/02/10/ABB-%E6%9C%BA%E5%99%A8%E4%BA%BAIO%E9%80%9A%E8%AE%AF/" rel="next" title="ABB 机器人IO通讯">
-                  ABB 机器人IO通讯 <i class="fa fa-chevron-right"></i>
+                <a href="/2021/07/31/ABB%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AE%89%E8%A3%85/" rel="next" title="ABB机器人安装">
+                  ABB机器人安装 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
