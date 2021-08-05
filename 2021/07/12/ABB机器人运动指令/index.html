@@ -29,10 +29,13 @@
 <meta property="og:description" content="机器人运动指令   运动控制 指令    绝对位置运动 MOVAbsJ   关节运动 MOVJ   直线运动 MOVL   圆弧运动 MOVC   绝对位置（MoveAbsJ）绝对位置运动指令是机器人使用6个轴和外轴的角度值来定义目标位置数据：     参数 含义    * 目标点位置数据   v1000 运动速度数据，1000mm&#x2F;s   z50 转弯区数据   tool1 工具坐标数据   w">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210714115506.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210805083638.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210715162840.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210715163324.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210723133311.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210805082231.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210723133632.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210805081618.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210723134403.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724110653.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724100544.png">
@@ -49,6 +52,7 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724120226.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/pcImages/20210724115958.gif">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724191301.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210805082556.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724191647.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724193351.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724193621.png">
@@ -58,7 +62,7 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724200106.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/pcImages/20210724200535.gif">
 <meta property="article:published_time" content="2021-07-12T02:03:49.000Z">
-<meta property="article:modified_time" content="2021-07-24T13:07:34.283Z">
+<meta property="article:modified_time" content="2021-08-05T04:18:22.793Z">
 <meta property="article:author" content="dusty">
 <meta property="article:tag" content="ABB">
 <meta property="article:tag" content="RAPID">
@@ -202,6 +206,9 @@
       <span class="links-of-author-item">
         <a href="https://zhan.xunlei.com/space/13503091" title="迅雷小站 → https:&#x2F;&#x2F;zhan.xunlei.com&#x2F;space&#x2F;13503091" rel="noopener" target="_blank"><i class="fas fa-download fa-fw"></i>迅雷小站</a>
       </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/1474653415" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;1474653415" rel="noopener" target="_blank"><i class="fas fa-video fa-fw"></i>Bilibili</a>
+      </span>
   </div>
 
 
@@ -269,7 +276,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-07-24 20:07:34" itemprop="dateModified" datetime="2021-07-24T20:07:34+07:00">2021-07-24</time>
+        <time title="修改时间：2021-08-05 11:18:22" itemprop="dateModified" datetime="2021-08-05T11:18:22+07:00">2021-08-05</time>
       </span>
 
   
@@ -350,6 +357,8 @@
 <td align="left">工件坐标数据</td>
 </tr>
 </tbody></table>
+<p>MoveAbsJ指令下，机器人以单轴运行的方式运动至目标点，绝对不会存在奇点，运动状态完全不可控，避免在正常生产中使用此指令，常用于检查机器人零点位置，指令中TCP与Wobj只与运行速度有关，与运动位置无关。常用于机器人六个轴回到机械零点的位置：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210805083638.png" alt="20210805083638"></p>
 <ol>
 <li><p>点击*号，在新页面中点击<strong>表达式</strong>，点击<strong>编辑</strong>：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210715162840.png" alt="20210715162840"></p>
 </li>
@@ -358,8 +367,12 @@
 </ol>
 <h2 id="关节运动-MoveJ"><a href="#关节运动-MoveJ" class="headerlink" title="关节运动 (MoveJ)"></a>关节运动 (MoveJ)</h2><p>关节运动是MoveJ是在路径精度要求不高的情况下，机器人的工具中心点TCP从一个位置移动到另一个位置，两个位置间的移动路径不一定是直线：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210723133311.png" alt="20210723133311"></p>
+<p>MoveJ指令下，机器人以最快捷的方式运动到目标点，机器人运动状态不完全可控，但运动路径保持唯一，常用于机器人在空间大范围移动，<strong>非工作状态移动？</strong>，语句如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210805082231.png" alt="20210805082231"></p>
 <h2 id="直线运送（MoveL）"><a href="#直线运送（MoveL）" class="headerlink" title="直线运送（MoveL）"></a>直线运送（MoveL）</h2><p>线性运动是机器人的TCP从起点到终点之间的路径始终保持为直线。一般如焊接，涂胶等应用对路径要求高的场合使用此指令：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210723133632.png" alt="20210723133632"></p>
+<p>MoveL可能出现奇点，常用于工作状态移动，语句如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210805081618.png" alt="20210805081618"></p>
 <p><strong>Z50与fine</strong>的区别：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MoveL P10, V100, Z50, tool1&#x2F;Wobj1;</span><br><span class="line">MoveL P20, V100, fine, tool1&#x2F;Wobj1;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>在接近P10的时候，Z50逼近但不靠近，形成半径50mm转弯曲线，但fine是精确达到：</p>
@@ -437,6 +450,8 @@
 <p><strong>结果演示</strong>:<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/pcImages/20210724115958.gif" alt="MoveL4"></p>
 <h2 id="MoveC：圆弧运动"><a href="#MoveC：圆弧运动" class="headerlink" title="MoveC：圆弧运动"></a>MoveC：圆弧运动</h2><p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724191301.png" alt="20210724191301"></p>
 <p>需要三个点确定一个圆弧运动：起点<code>p10</code>,终点<code>p40</code>,曲率<code>p30</code>.</p>
+<p>MoveC指令下，机器人状态可控，运动路径唯一，常用于工作状态移动：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210805082556.png" alt="20210805082556"></p>
 <p><strong>示例1</strong>：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210724191647.png" alt="20210724191647"></p>
 <p>要求：默认点为pHome,让机器人从P10，经过P20，到P30结束，后回到pHome.</p>
