@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="QlHJ0JPEwxyavYWslPjBgJW3Ks8uKIPZcLCP45iE9eo">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"dustycn.github.io","root":"/","images":"/images","scheme":"Mist","version":"8.6.1","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="示例程序控制要求机器人先到达一个设定的点，然后在另外两个设定的目标点之间来回走3遍。 建立程序模块与例行程序 打开程序编辑器，如果提示不存在程序，先单击取消进入模块列表：  通过文件&#x2F;新建模块，新建一个名为Module1,类型为Program的模块：  单击显示模块：  单击例行程序，通过文件菜单，新建例行程序：  建立一个主程序，名称为main,确定：   建立程序数据 新建一个类型为robta">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RAPID程序示例及自动运行">
+<meta property="og:url" content="http://dustycn.github.io/2021/07/06/RAPID%E7%A8%8B%E5%BA%8F%E7%A4%BA%E4%BE%8B%E5%8F%8A%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8C/index.html">
+<meta property="og:site_name" content="dusty@">
+<meta property="og:description" content="示例程序控制要求机器人先到达一个设定的点，然后在另外两个设定的目标点之间来回走3遍。 建立程序模块与例行程序 打开程序编辑器，如果提示不存在程序，先单击取消进入模块列表：  通过文件&#x2F;新建模块，新建一个名为Module1,类型为Program的模块：  单击显示模块：  单击例行程序，通过文件菜单，新建例行程序：  建立一个主程序，名称为main,确定：   建立程序数据 新建一个类型为robta">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707075530.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707080220.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707080728.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707081055.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707081604.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707082341.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707083117.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707090956.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707091419.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707092503.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707093759.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707094343.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707095405.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707100315.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707101334.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707104438.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/pcImages/abb%20demo1.gif">
+<meta property="article:published_time" content="2021-07-06T09:55:52.000Z">
+<meta property="article:modified_time" content="2021-07-07T04:09:08.000Z">
+<meta property="article:author" content="dusty">
+<meta property="article:tag" content="ABB">
+<meta property="article:tag" content="RAPID">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707075530.png">
+
+
+<link rel="canonical" href="http://dustycn.github.io/2021/07/06/RAPID%E7%A8%8B%E5%BA%8F%E7%A4%BA%E4%BE%8B%E5%8F%8A%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8C/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://dustycn.github.io/2021/07/06/RAPID%E7%A8%8B%E5%BA%8F%E7%A4%BA%E4%BE%8B%E5%8F%8A%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8C/","path":"2021/07/06/RAPID程序示例及自动运行/","title":"RAPID程序示例及自动运行"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>RAPID程序示例及自动运行 | dusty@</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">dusty@</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">study notes</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">11</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">17</span></a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B%E7%A8%8B%E5%BA%8F%E6%8E%A7%E5%88%B6%E8%A6%81%E6%B1%82"><span class="nav-number">1.</span> <span class="nav-text">示例程序控制要求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8B%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%9D%97%E4%B8%8E%E4%BE%8B%E8%A1%8C%E7%A8%8B%E5%BA%8F"><span class="nav-number">2.</span> <span class="nav-text">建立程序模块与例行程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8B%E7%A8%8B%E5%BA%8F%E6%95%B0%E6%8D%AE"><span class="nav-number">3.</span> <span class="nav-text">建立程序数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E6%8C%87%E4%BB%A4"><span class="nav-number">4.</span> <span class="nav-text">添加指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Summary"><span class="nav-number">5.</span> <span class="nav-text">Summary</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="dusty"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">dusty</p>
+  <div class="site-description" itemprop="description">dusty@ Studying...</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/dustycn" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;dustycn" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:dustycn@gmail.com" title="E-Mail → mailto:dustycn@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/dustycn" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;dustycn" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/dustyat" title="FB Page → https:&#x2F;&#x2F;www.facebook.com&#x2F;dustyat" rel="noopener" target="_blank"><i class="fab fa-facebook fa-fw"></i>FB Page</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://instagram.com/dustyatins" title="Instagram → https:&#x2F;&#x2F;instagram.com&#x2F;dustyatins" rel="noopener" target="_blank"><i class="fab fa-instagram fa-fw"></i>Instagram</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://dusty.lofter.com/" title="Lofter → https:&#x2F;&#x2F;dusty.lofter.com&#x2F;" rel="noopener" target="_blank"><i class="fas fa-camera fa-fw"></i>Lofter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://zhan.xunlei.com/space/13503091" title="迅雷小站 → https:&#x2F;&#x2F;zhan.xunlei.com&#x2F;space&#x2F;13503091" rel="noopener" target="_blank"><i class="fas fa-download fa-fw"></i>迅雷小站</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/1474653415" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;1474653415" rel="noopener" target="_blank"><i class="fas fa-video fa-fw"></i>Bilibili</a>
+      </span>
+  </div>
+
+
+
+          </div>
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://dustycn.github.io/2021/07/06/RAPID%E7%A8%8B%E5%BA%8F%E7%A4%BA%E4%BE%8B%E5%8F%8A%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="dusty">
+      <meta itemprop="description" content="dusty@ Studying...">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dusty@">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          RAPID程序示例及自动运行
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-07-06 16:55:52" itemprop="dateCreated datePublished" datetime="2021-07-06T16:55:52+07:00">2021-07-06</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-07 11:09:08" itemprop="dateModified" datetime="2021-07-07T11:09:08+07:00">2021-07-07</time>
+      </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2021/07/06/RAPID%E7%A8%8B%E5%BA%8F%E7%A4%BA%E4%BE%8B%E5%8F%8A%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8C/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/07/06/RAPID程序示例及自动运行/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="示例程序控制要求"><a href="#示例程序控制要求" class="headerlink" title="示例程序控制要求"></a>示例程序控制要求</h2><p>机器人先到达一个设定的点，然后在另外两个设定的目标点之间来回走3遍。</p>
+<h2 id="建立程序模块与例行程序"><a href="#建立程序模块与例行程序" class="headerlink" title="建立程序模块与例行程序"></a>建立程序模块与例行程序</h2><ol>
+<li><p>打开<strong>程序编辑器</strong>，如果提示不存在程序，先单击<strong>取消</strong>进入模块列表：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707075530.png" alt="20210707075530"></p>
+</li>
+<li><p>通过<strong>文件</strong>/<strong>新建模块</strong>，新建一个名为<strong>Module1</strong>,类型为<strong>Program</strong>的模块：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707080220.png" alt="20210707080220"></p>
+</li>
+<li><p>单击<strong>显示模块</strong>：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707080728.png" alt="20210707080728"></p>
+</li>
+<li><p>单击<strong>例行程序</strong>，通过<strong>文件</strong>菜单，新建例行程序：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707081055.png" alt="20210707081055"></p>
+</li>
+<li><p>建立一个主程序，名称为<strong>main</strong>,确定：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707081604.png" alt="20210707081604"></p>
+</li>
+</ol>
+<h2 id="建立程序数据"><a href="#建立程序数据" class="headerlink" title="建立程序数据"></a>建立程序数据</h2><ol>
+<li><p>新建一个类型为<strong>robtarget</strong>的程序数据，注意，如果看不到这个数据类型，切换<strong>视图</strong>到<strong>全部数据类型</strong>：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707082341.png" alt="20210707082341"></p>
+</li>
+<li><p>新建第一个目标运动位置数据，命令为<strong>p10</strong>,范围<strong>全局</strong>，存储类型为<strong>常量</strong>（实际默认就是这个设定，这可能也是RAPID内置如此多的数据类型的原因吧：方便示教器操作）：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707083117.png" alt="20210707083117"></p>
+</li>
+<li><p>将手臂移动到一个初始位置，在示教器中单击<strong>编辑</strong>修改此位置数据（建议配合RobotStudio仿真环境测试，见dusty@之前的文章）:<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707090956.png" alt="20210707090956"></p>
+</li>
+<li><p>再新建3个目标位置数据 p20,p30:<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707091419.png" alt="20210707091419"></p>
+</li>
+<li><p>再新建一个数字类型num的数据，并设定为全局可变：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707092503.png" alt="20210707092503"></p>
+<p><strong>Note</strong>：</p>
+</li>
+</ol>
+<ul>
+<li>不同的数据类型是分类放到不同的数据列表中的，同一个列表界面新建的默认是同一种数据类型，要到数据类型列表中选择num；</li>
+<li>区分变量与可变量；</li>
+</ul>
+<h2 id="添加指令"><a href="#添加指令" class="headerlink" title="添加指令"></a>添加指令</h2><ol>
+<li><p>在主程序main中添加一行赋值指令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ncount :&#x3D; 0;</span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707093759.png" alt="20210707093759"></p>
+<p>单击<strong>EXP</strong>,编辑，选择<strong>仅限选定内容</strong>：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707094343.png" alt="20210707094343"></p>
+</li>
+<li><p>继续添加两条运动指令 MoveJ：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707095405.png" alt="20210707095405"></p>
+<blockquote>
+<p>添加指令后，直接点击要修改的位置进行修改。</p>
+</blockquote>
+</li>
+<li><p>添加循环语句WHILE，条件判断语句IF,ELSE:<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707100315.png" alt="20210707100315"></p>
+<blockquote>
+<p>注意，添加ELSE是点击IF后再弹出的界面添加。</p>
+</blockquote>
+</li>
+<li><p>最终的程序：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707101334.png" alt="20210707101334"></p>
+<blockquote>
+<p>WaitTime相当于Arduino的delay,1的单位是秒；</p>
+</blockquote>
+</li>
+<li><p>运行程序：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707104438.png" alt="20210707104438"></p>
+<ul>
+<li>切换到自动模式；</li>
+<li>在自动生成川口，将PP（指针）移至Main;</li>
+<li>点击运行按钮；</li>
+<li>运行结束点击停止按钮；</li>
+</ul>
+</li>
+</ol>
+<p><strong>Note</strong>:</p>
+<blockquote>
+<p>示教器的界面最多可以同时打开6个串口，在下方可以方便切换。</p>
+</blockquote>
+<ol start="6">
+<li>实际效果：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/pcImages/abb%20demo1.gif" alt="ABB RAPID DEMO1"></li>
+</ol>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><ol>
+<li>模块Module是RAPID的灵魂，先建立Module,再在其下建立例行程序main和程序数据，程序数据是在编辑例行程序的时候会用到的参数；</li>
+<li>PP函数指针指向Main,依顺序运行RAPID程序，直到结束；</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee❤️</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="dusty 微信">
+        <span>微信</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/ABB/" rel="tag"># ABB</a>
+              <a href="/tags/RAPID/" rel="tag"># RAPID</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/07/07/RobotStudio%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%BE%91RAPID%E7%A8%8B%E5%BA%8F/" rel="prev" title="RobotStudio在线编辑RAPID程序">
+                  <i class="fa fa-chevron-left"></i> RobotStudio在线编辑RAPID程序
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/07/06/ABB-RAPID-%E7%A8%8B%E5%BA%8F%E4%BB%A5%E5%8F%8A%E6%8C%87%E4%BB%A4/" rel="next" title="ABB RAPID 程序以及指令">
+                  ABB RAPID 程序以及指令 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">dusty</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"dustycnblog","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js"></script>
+
+</body>
+</html>
