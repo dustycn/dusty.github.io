@@ -92,8 +92,8 @@
 <nav class="site-nav">
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">11</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">17</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">13</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">18</span></a></li>
   </ul>
 </nav>
 
@@ -140,14 +140,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -212,7 +212,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://dustycn.github.io/2021/01/13/ABB-RobotStudio-%E7%BB%83%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
+    <link itemprop="mainEntityOfPage" href="http://dustycn.github.io/2021/01/15/ABB-RobotStudio-%E8%99%9A%E6%8B%9F%E7%A4%BA%E6%95%99%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -225,7 +225,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/01/13/ABB-RobotStudio-%E7%BB%83%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="post-title-link" itemprop="url">ABB RobotStudio 练习环境搭建</a>
+          <a href="/2021/01/15/ABB-RobotStudio-%E8%99%9A%E6%8B%9F%E7%A4%BA%E6%95%99%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">ABB RobotStudio 虚拟示教器的使用</a>
         </h2>
 
         <div class="post-meta-container">
@@ -236,14 +236,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-01-13 20:53:02" itemprop="dateCreated datePublished" datetime="2021-01-13T20:53:02+07:00">2021-01-13</time>
+      <time title="创建时间：2021-01-15 20:09:38" itemprop="dateCreated datePublished" datetime="2021-01-15T20:09:38+07:00">2021-01-15</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-07-14 16:32:12" itemprop="dateModified" datetime="2021-07-14T16:32:12+07:00">2021-07-14</time>
+        <time title="修改时间：2021-08-15 13:59:44" itemprop="dateModified" datetime="2021-08-15T13:59:44+07:00">2021-08-15</time>
       </span>
 
   
@@ -255,8 +255,8 @@
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2021/01/13/ABB-RobotStudio-%E7%BB%83%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/01/13/ABB-RobotStudio-练习环境搭建/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2021/01/15/ABB-RobotStudio-%E8%99%9A%E6%8B%9F%E7%A4%BA%E6%95%99%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/01/15/ABB-RobotStudio-虚拟示教器的使用/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -270,109 +270,117 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="下载最新版本的RobotStudio"><a href="#下载最新版本的RobotStudio" class="headerlink" title="下载最新版本的RobotStudio"></a>下载最新版本的RobotStudio</h2><p><a target="_blank" rel="noopener" href="https://new.abb.com/products/robotics/robotstudio">https://new.abb.com/products/robotics/robotstudio</a></p>
-<h2 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h2><p>选择”希望申请使用许可证”：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210113210029.png" alt="20210113210029"></p>
-<p>选择”RobotStudio Premium”:</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210113211205.png" alt="20210113211205"></p>
-<p>点击”完成”，提示重启激活：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210113211338.png" alt="20210113211338"></p>
-<pre><code>目前只有30天的试用期。</code></pre>
-<h2 id="安装Robotware"><a href="#安装Robotware" class="headerlink" title="安装Robotware:"></a>安装Robotware:</h2><p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114203835.png" alt="20210114203835"></p>
-<h2 id="创建工作站："><a href="#创建工作站：" class="headerlink" title="创建工作站："></a>创建工作站：</h2><p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114205234.png" alt="20210114205234"></p>
-<p>导入ABB模型库：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114205337.png" alt="20210114205337"></p>
-<p>导入模型库：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114205851.png" alt="20210114205851"></p>
-<p>添加模型到手臂：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114210147.png" alt="20210114210147"></p>
-<ol>
-<li>直接拖动模型到手臂上即可安装</li>
-<li>或者单击要选择的模型，然后在左侧的<strong>布局</strong>选项卡中，右击模型，选择<strong>安装到</strong>手臂：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210713160055.png" alt="20210713160055"></li>
-</ol>
-<blockquote>
-<p>选择的模型有些可以直接安装到之前布置好的基座上，默认是放置到手臂基坐标原点，有些小模型可能会隐藏在手臂基座里面，可以通过左侧<strong>布局</strong>选项卡里选择查看。</p>
-</blockquote>
-<p>拆除模型：</p>
-<ol>
-<li><p>选中要拆除的模型，在左侧<strong>布局</strong>选项卡中选择模型，右击选择<strong>拆除</strong>：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210713154216.png" alt="20210713154216"></p>
-</li>
-<li><p>模型会回到原点，再到左侧<strong>布局</strong>选项卡选择模型，右击选择<strong>删除</strong>：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210713154617.png" alt="20210713154617"></p>
-</li>
-</ol>
-<p>从布局导入虚拟控制器：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114210723.png" alt="20210114210723"></p>
-<p>下一个，到配置选项：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114211130.png" alt="20210114211130"></p>
-<p>选择默认语言：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114211340.png" alt="20210114211340"></p>
-<p>选择 Industrial Networks:</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114211550.png" alt="20210114211550"></p>
-<p>选择 Anybus Adapters:</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114211716.png" alt="20210114211716"></p>
-<pre><code>其它功能安装需要选择。</code></pre>
-<p>等待控制器启动：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114211934.png" alt="20210114211934"></p>
-<p>启动虚拟示教器：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114212915.png" alt="20210114212915"></p>
-<p>至此RS初始练习环境已搭建完成：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210114213211.png" alt="20210114213211"></p>
-<p>显示手臂工作区域：</p>
-<ol>
-<li><p>在布局选项卡中，右击手臂，选择<strong>显示机器人工作区域</strong>：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210713160633.png" alt="20210713160633"></p>
-</li>
-<li><p>白线内区域即为手臂可达范围，工作对象应在此范围内：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210713160845.png" alt="20210713160845"></p>
-</li>
-</ol>
-<p>继续添加组件Curve Thing:</p>
-<ol>
-<li><p>右击Curve Thing, 依次选择<strong>位置</strong>，<strong>放置</strong>，<strong>三点法</strong>：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210713161324.png" alt="20210713161324"></p>
-</li>
-<li><p>开捕捉工具的<strong>选择部件</strong>和<strong>捕捉末端</strong>,鼠标点击左侧窗口的第一个点,然后在右侧依次选择对应的6个端点:<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210713170514.png" alt="20210713170514"></p>
-</li>
-<li><p>点击<strong>应用</strong>,工件即可放在桌子上了:<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210713170639.png" alt="20210713170639"></p>
-</li>
-</ol>
-<blockquote>
-<p>这个之前操作几次都失败了，后来按照上面的顺序选点才对的，目前还没有完全弄懂，后续再Update原因。</p>
-</blockquote>
-<h2 id="主要快捷键"><a href="#主要快捷键" class="headerlink" title="主要快捷键"></a>主要快捷键</h2><table>
+          <h2 id="自动状态下机器人部分功能被禁用"><a href="#自动状态下机器人部分功能被禁用" class="headerlink" title="自动状态下机器人部分功能被禁用"></a>自动状态下机器人部分功能被禁用</h2><p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210115201249.png" alt="20210115201249"></p>
+<h2 id="点击-Ctrol-Panel"><a href="#点击-Ctrol-Panel" class="headerlink" title="点击 Ctrol Panel"></a>点击 Ctrol Panel</h2><p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210115201616.png" alt="20210115201616"></p>
+<h2 id="从自动切换到手动模式"><a href="#从自动切换到手动模式" class="headerlink" title="从自动切换到手动模式"></a>从自动切换到手动模式</h2><p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210115201914.png" alt="20210115201914"></p>
+<h2 id="查看事件日志"><a href="#查看事件日志" class="headerlink" title="查看事件日志"></a>查看事件日志</h2><p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210115203654.png" alt="20210115203654"></p>
+<h2 id="机器人数据备份与恢复"><a href="#机器人数据备份与恢复" class="headerlink" title="机器人数据备份与恢复"></a>机器人数据备份与恢复</h2><p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210115204100.png" alt="20210115204100"></p>
+<p><strong>定期备份机器人数据（包含程序以及系统参数），可以在系统紊乱或者重装系统后快速恢复。</strong></p>
+<h2 id="示教器说明"><a href="#示教器说明" class="headerlink" title="示教器说明"></a>示教器说明</h2><p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210115205053.png" alt="20210115205053"></p>
+<h2 id="示教器按钮说明"><a href="#示教器按钮说明" class="headerlink" title="示教器按钮说明"></a>示教器按钮说明</h2><p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210731120740.png" alt="20210731120740"></p>
+<table>
 <thead>
 <tr>
-<th align="right">快捷键</th>
-<th align="left">功能</th>
+<th align="right">按钮</th>
+<th align="left">说明</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="right"><kbd>Ctrl</kbd> + 鼠标左键</td>
-<td align="left">平移工作站</td>
+<td align="right">A-D</td>
+<td align="left">预设按钮，1-4，可定制的意思</td>
 </tr>
 <tr>
-<td align="right"><kbd>Ctrl</kbd> + 鼠标右键+拖动鼠标（左小右大）</td>
-<td align="left">缩放工作站</td>
+<td align="right">E</td>
+<td align="left">选择机械单元</td>
 </tr>
 <tr>
-<td align="right">鼠标中键滚动</td>
-<td align="left">缩放工作站</td>
+<td align="right">F</td>
+<td align="left">切换移动模式，重定向或者线性</td>
 </tr>
 <tr>
-<td align="right"><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + 鼠标左键</td>
-<td align="left">旋转工作站</td>
+<td align="right">G</td>
+<td align="left">切换移动模式，轴1-3或4-6</td>
 </tr>
 <tr>
-<td align="right"><kbd>Ctrl</kbd> + <kbd>B</kbd></td>
-<td align="left">屏幕截图到剪贴板</td>
+<td align="right">H</td>
+<td align="left">切换增量</td>
+</tr>
+<tr>
+<td align="right">J</td>
+<td align="left">Step BACKWARD (步退)按钮，使程序后退一步的指令</td>
+</tr>
+<tr>
+<td align="right">K</td>
+<td align="left">START (启动)按钮，开始执行程序</td>
+</tr>
+<tr>
+<td align="right">L</td>
+<td align="left">Step FORWARD (步进)按钮，使程序前进一步的指令</td>
+</tr>
+<tr>
+<td align="right">M</td>
+<td align="left">STOP (停止)按钮，停止程序执行</td>
 </tr>
 </tbody></table>
-<h2 id="Freehand-拖动-旋转模型"><a href="#Freehand-拖动-旋转模型" class="headerlink" title="Freehand 拖动/旋转模型"></a>Freehand 拖动/旋转模型</h2><p><strong>基本选项卡</strong>里面有一个<strong>Freehand</strong>控制面板，可以对模型进行拖动/旋转操作，也可以不使用示教器对手臂关键进行拖动：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210714084513.png" alt="20210714084513"></p>
+<h2 id="示教器握持"><a href="#示教器握持" class="headerlink" title="示教器握持"></a>示教器握持</h2><p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210115205446.png" alt="20210115205446"></p>
+<p>⚠️ <strong>使能器分两档，主要是起安全保护作用，在手动状态下，按下并保持第一档，机器人处于“电机开启”状态，才可进行手动操作与程式调试。发生危险时，人本能的松开，或者按紧（此时使能器处于第二档，机器人处于防护装置停止状态），机器人会立即停止。</strong></p>
+<h2 id="手动模式下的操作"><a href="#手动模式下的操作" class="headerlink" title="手动模式下的操作"></a>手动模式下的操作</h2><p><strong>菜单-&gt;手动操作-&gt;动作模式</strong>，先学习单轴1，2，3轴运动，选<strong>轴 1-3</strong>，<strong>确定</strong>：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210101301.png" alt="20210210101301"></p>
+<p><strong>操作杆方向</strong>说明：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210102352.png" alt="20210210102352"></p>
+<ul>
+<li>上下移动操纵杆，轴2运动；</li>
+<li>左右移动操作杆，轴1运动；</li>
+<li>旋转操纵杆，轴3运动；</li>
+<li><strong>操纵幅度越大，机器人运动速度越快</strong>；</li>
+</ul>
+<p><strong>6轴机器人各轴运动说明</strong>：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210103108.png" alt="20210210103108"></p>
+<p><strong>虚拟示教器操作</strong>：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210104518.png" alt="20210210104518"></p>
+<p>按下<strong>Enable</strong>开启电机，根据操作杆方向提示，按住摇杆不动，机器人开发仿真运动。</p>
+<p>4，5，6轴单轴运动按照同样方式操作。</p>
+<ol>
+<li><strong>单轴运动</strong></li>
+</ol>
+<p>ABB6轴机器人是由6个伺服电动机驱动的，每个电动机驱动一个轴，就是六轴机器人了。<br>每次手动操作一个关节轴的运动，就称之为单轴运动。单轴运动在进行粗略的定位和比较大幅度的移动时，相比其他的手动操作模式会方便快捷很多。</p>
+<p>单轴运动使用时机：</p>
+<ul>
+<li>将机械单元移除危险位置；</li>
+<li>将机器人移出奇点；</li>
+<li>定位机器人轴，以便进行校准；</li>
+</ul>
 <blockquote>
-<p>先在Freehand控制面板里面选择需要移动的方式，鼠标悬停图标是有提示文字。点击后回到视图页面选中模型，会出现坐标轴，选中坐标轴（或原点？）后，要一直按住鼠标左键不放拖动或者旋转。<br>目前<strong>拖曳</strong>和<strong>多个机器人手动操作</strong>还没有试成功，后续继续Update.</p>
+<p>机器人外轴运送必须为单轴运动。</p>
 </blockquote>
-<p>另外，在视图页面右击鼠标，结合不通的视图，配合<strong>Freehand</strong>的<strong>手动线性</strong>可以很方便的拖动工具模型定位：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210714090751.png" alt="20210714090751"></p>
+<ol start="2">
+<li><strong>线性运动</strong>：</li>
+</ol>
+<p>在<strong>动作模式</strong>中选择线性运动。因为线性运动是指法兰盘上固定的工具的TCP在空间中的线性运动，所以，还需要在<strong>工具坐标</strong>中选择工具坐标，刚开始只有一个<strong>tool0</strong>可以使用。</p>
+<p>线性运动移动的幅度较小，适合较为精确的定位和移动。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210110444.png" alt="20210210110444"></p>
+<p><strong>增量模式</strong>，是指，每次操纵方向杆1次，机器人运动一步，速率为每秒10步，方便控制幅度部熟练的时候操作（一般选大）：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210110705.png" alt="20210210110705"></p>
+<p>此时操纵杆方向变为<strong>X,Y,Z</strong>,每操纵一次，工具按照X,Y,Z方向线性运动一个操纵持续时间的步数：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210111742.png" alt="20210210111742"></p>
+<ol start="3">
+<li><strong>重定位</strong>运动：</li>
+</ol>
+<p><strong>重定位</strong>是指机器人第6轴法兰盘上的工具TCP点在空间绕着工具坐标系旋转的运动，或者理解为机器人绕着工具TCP点做姿态调整的运动。</p>
+<p>重定位运动的手动操作会更全方位的移动和调整。</p>
+<ul>
+<li><strong>动作模式</strong>切换到重定位；</li>
+<li>选择<strong>工具坐标</strong>，刚开始只有一个<strong>tool0</strong>；</li>
+<li><strong>坐标系</strong>选<strong>工具</strong>；</li>
+</ul>
 <blockquote>
-<p>使用Freehand<strong>手动关节</strong>，第六轴不是很好选中，可以多试几次，不行的话换示教器操作。</p>
+<p>重定位运动时，必须选择工具坐标。</p>
 </blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210115705.png" alt="20210210115705"></p>
+<p><strong>快捷开关</strong>：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210121433.png" alt="20210210121433"></p>
+<p>点击屏幕右下角状态显示图标，也可以设置相关状态，以及调整摇杆的控制幅度：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210121800.png" alt="20210210121800"></p>
 
       
     </div>
@@ -392,7 +400,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/15/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><span class="page-number current">16</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/17/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/15/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><span class="page-number current">16</span><a class="page-number" href="/page/17/">17</a><a class="page-number" href="/page/18/">18</a><a class="extend next" rel="next" href="/page/17/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>

@@ -92,8 +92,8 @@
 <nav class="site-nav">
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">11</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">17</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">13</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">18</span></a></li>
   </ul>
 </nav>
 
@@ -140,14 +140,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -212,7 +212,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://dustycn.github.io/2021/07/06/RAPID%E7%A8%8B%E5%BA%8F%E7%A4%BA%E4%BE%8B%E5%8F%8A%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8C/">
+    <link itemprop="mainEntityOfPage" href="http://dustycn.github.io/2021/07/07/RobotStudio%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%BE%91RAPID%E7%A8%8B%E5%BA%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -225,7 +225,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/07/06/RAPID%E7%A8%8B%E5%BA%8F%E7%A4%BA%E4%BE%8B%E5%8F%8A%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8C/" class="post-title-link" itemprop="url">RAPID程序示例及自动运行</a>
+          <a href="/2021/07/07/RobotStudio%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%BE%91RAPID%E7%A8%8B%E5%BA%8F/" class="post-title-link" itemprop="url">RobotStudio在线编辑RAPID程序</a>
         </h2>
 
         <div class="post-meta-container">
@@ -235,16 +235,10 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-07-06 16:55:52" itemprop="dateCreated datePublished" datetime="2021-07-06T16:55:52+07:00">2021-07-06</time>
+      <time title="创建时间：2021-07-07 14:10:06 / 修改时间：14:42:52" itemprop="dateCreated datePublished" datetime="2021-07-07T14:10:06+07:00">2021-07-07</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-07-07 11:09:08" itemprop="dateModified" datetime="2021-07-07T11:09:08+07:00">2021-07-07</time>
-      </span>
 
   
   
@@ -255,8 +249,8 @@
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2021/07/06/RAPID%E7%A8%8B%E5%BA%8F%E7%A4%BA%E4%BE%8B%E5%8F%8A%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8C/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/07/06/RAPID程序示例及自动运行/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2021/07/07/RobotStudio%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%BE%91RAPID%E7%A8%8B%E5%BA%8F/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/07/07/RobotStudio在线编辑RAPID程序/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -270,76 +264,44 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="示例程序控制要求"><a href="#示例程序控制要求" class="headerlink" title="示例程序控制要求"></a>示例程序控制要求</h2><p>机器人先到达一个设定的点，然后在另外两个设定的目标点之间来回走3遍。</p>
-<h2 id="建立程序模块与例行程序"><a href="#建立程序模块与例行程序" class="headerlink" title="建立程序模块与例行程序"></a>建立程序模块与例行程序</h2><ol>
-<li><p>打开<strong>程序编辑器</strong>，如果提示不存在程序，先单击<strong>取消</strong>进入模块列表：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707075530.png" alt="20210707075530"></p>
+          <h2 id="连接机器人"><a href="#连接机器人" class="headerlink" title="连接机器人"></a>连接机器人</h2><ol>
+<li><p>使用网线将计算机与机器人连接，计算机的IP设定为自动获取；</p>
 </li>
-<li><p>通过<strong>文件</strong>/<strong>新建模块</strong>，新建一个名为<strong>Module1</strong>,类型为<strong>Program</strong>的模块：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707080220.png" alt="20210707080220"></p>
+<li><p>在RobotStudio的<strong>添加控制器</strong>选项卡下，选择<strong>一键连接</strong>；<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707141744.png" alt="20210707141744"></p>
 </li>
-<li><p>单击<strong>显示模块</strong>：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707080728.png" alt="20210707080728"></p>
+<li><p>连接上后，将机器人状态钥匙开关切换到手动，点击<strong>请求写权限</strong>：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707141937.png" alt="20210707141937"></p>
 </li>
-<li><p>单击<strong>例行程序</strong>，通过<strong>文件</strong>菜单，新建例行程序：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707081055.png" alt="20210707081055"></p>
+<li><p>在示教器上确认即可；</p>
 </li>
-<li><p>建立一个主程序，名称为<strong>main</strong>,确定：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707081604.png" alt="20210707081604"></p>
-</li>
-</ol>
-<h2 id="建立程序数据"><a href="#建立程序数据" class="headerlink" title="建立程序数据"></a>建立程序数据</h2><ol>
-<li><p>新建一个类型为<strong>robtarget</strong>的程序数据，注意，如果看不到这个数据类型，切换<strong>视图</strong>到<strong>全部数据类型</strong>：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707082341.png" alt="20210707082341"></p>
-</li>
-<li><p>新建第一个目标运动位置数据，命令为<strong>p10</strong>,范围<strong>全局</strong>，存储类型为<strong>常量</strong>（实际默认就是这个设定，这可能也是RAPID内置如此多的数据类型的原因吧：方便示教器操作）：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707083117.png" alt="20210707083117"></p>
-</li>
-<li><p>将手臂移动到一个初始位置，在示教器中单击<strong>编辑</strong>修改此位置数据（建议配合RobotStudio仿真环境测试，见dusty@之前的文章）:<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707090956.png" alt="20210707090956"></p>
-</li>
-<li><p>再新建3个目标位置数据 p20,p30:<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707091419.png" alt="20210707091419"></p>
-</li>
-<li><p>再新建一个数字类型num的数据，并设定为全局可变：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707092503.png" alt="20210707092503"></p>
-<p><strong>Note</strong>：</p>
+<li><p>程式修改完成，在示教器上点击撤回，收回写权限；</p>
 </li>
 </ol>
-<ul>
-<li>不同的数据类型是分类放到不同的数据列表中的，同一个列表界面新建的默认是同一种数据类型，要到数据类型列表中选择num；</li>
-<li>区分变量与可变量；</li>
-</ul>
-<h2 id="添加指令"><a href="#添加指令" class="headerlink" title="添加指令"></a>添加指令</h2><ol>
-<li><p>在主程序main中添加一行赋值指令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ncount :&#x3D; 0;</span><br></pre></td></tr></table></figure>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707093759.png" alt="20210707093759"></p>
-<p>单击<strong>EXP</strong>,编辑，选择<strong>仅限选定内容</strong>：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707094343.png" alt="20210707094343"></p>
+<h2 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h2><p><strong>为防止修改出错，请在修改前创建备份</strong></p>
+<ol>
+<li><p>RobotStudio点击<strong>备份</strong>，创建备份：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707142558.png" alt="20210707142558"></p>
 </li>
-<li><p>继续添加两条运动指令 MoveJ：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707095405.png" alt="20210707095405"></p>
-<blockquote>
-<p>添加指令后，直接点击要修改的位置进行修改。</p>
-</blockquote>
+<li><p>填写备份名称以及存储的位置，注意备份名称中不能有中文；</p>
 </li>
-<li><p>添加循环语句WHILE，条件判断语句IF,ELSE:<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707100315.png" alt="20210707100315"></p>
-<blockquote>
-<p>注意，添加ELSE是点击IF后再弹出的界面添加。</p>
-</blockquote>
-</li>
-<li><p>最终的程序：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707101334.png" alt="20210707101334"></p>
-<blockquote>
-<p>WaitTime相当于Arduino的delay,1的单位是秒；</p>
-</blockquote>
-</li>
-<li><p>运行程序：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707104438.png" alt="20210707104438"></p>
-<ul>
-<li>切换到自动模式；</li>
-<li>在自动生成川口，将PP（指针）移至Main;</li>
-<li>点击运行按钮；</li>
-<li>运行结束点击停止按钮；</li>
-</ul>
+<li><p>备份完成后，会提示操作完成；</p>
 </li>
 </ol>
-<p><strong>Note</strong>:</p>
-<blockquote>
-<p>示教器的界面最多可以同时打开6个串口，在下方可以方便切换。</p>
-</blockquote>
-<ol start="6">
-<li>实际效果：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/pcImages/abb%20demo1.gif" alt="ABB RAPID DEMO1"></li>
+<h2 id="恢复备份"><a href="#恢复备份" class="headerlink" title="恢复备份"></a>恢复备份</h2><ol>
+<li>与机器人建立连接，切换到手动，请求写权限，点检<strong>备份</strong>，选择从<strong>备份中恢复</strong>：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707142955.png" alt="20210707142955"></li>
 </ol>
-<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><ol>
-<li>模块Module是RAPID的灵魂，先建立Module,再在其下建立例行程序main和程序数据，程序数据是在编辑例行程序的时候会用到的参数；</li>
-<li>PP函数指针指向Main,依顺序运行RAPID程序，直到结束；</li>
+<h2 id="在线编辑RAPID"><a href="#在线编辑RAPID" class="headerlink" title="在线编辑RAPID"></a>在线编辑RAPID</h2><ol>
+<li>连上机器人，切换到手动，请求写权限；</li>
+<li>找到需要编辑的文件，编辑完成后，单击<strong>应用</strong>即可；<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707143426.png" alt="20210707143426"></li>
+<li>修改后，点击<strong>收回写权限</strong>。</li>
+</ol>
+<h2 id="在线编辑I-O信息"><a href="#在线编辑I-O信息" class="headerlink" title="在线编辑I/O信息"></a>在线编辑I/O信息</h2><ol>
+<li><p>连上机器人，切换到手动，请求写权限；</p>
+</li>
+<li><p>在<strong>控制器</strong>选项卡中，选择<strong>配置编辑器</strong>中的<strong>I/O System</strong>:<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707143728.png" alt="20210707143728"></p>
+</li>
+<li><p>在<strong>DeviceNet device</strong>上单击右键，选择<strong>新建DeviceNet device…</strong>:<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707143951.png" alt="20210707143951"></p>
+</li>
+<li><p>新建或者修改完成后，单击<strong>重启</strong>，选择<strong>热启动</strong>，才能使设定生效：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210707144236.png" alt="20210707144236"></p>
+</li>
 </ol>
 
       
@@ -360,7 +322,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/9/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/11/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/9/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="extend next" rel="next" href="/page/11/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>

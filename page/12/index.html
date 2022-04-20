@@ -92,8 +92,8 @@
 <nav class="site-nav">
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">11</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">17</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">13</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">18</span></a></li>
   </ul>
 </nav>
 
@@ -140,14 +140,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -212,7 +212,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://dustycn.github.io/2021/07/05/ABB-RAPID-%E7%A8%8B%E5%BA%8F%E6%95%B0%E6%8D%AE/">
+    <link itemprop="mainEntityOfPage" href="http://dustycn.github.io/2021/07/06/ABB-RAPID-%E7%A8%8B%E5%BA%8F%E4%BB%A5%E5%8F%8A%E6%8C%87%E4%BB%A4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -225,7 +225,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/07/05/ABB-RAPID-%E7%A8%8B%E5%BA%8F%E6%95%B0%E6%8D%AE/" class="post-title-link" itemprop="url">ABB RAPID 程序数据</a>
+          <a href="/2021/07/06/ABB-RAPID-%E7%A8%8B%E5%BA%8F%E4%BB%A5%E5%8F%8A%E6%8C%87%E4%BB%A4/" class="post-title-link" itemprop="url">ABB RAPID 程序以及指令</a>
         </h2>
 
         <div class="post-meta-container">
@@ -235,10 +235,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-07-05 12:55:51 / 修改时间：13:47:48" itemprop="dateCreated datePublished" datetime="2021-07-05T12:55:51+07:00">2021-07-05</time>
+      <time title="创建时间：2021-07-06 12:46:19" itemprop="dateCreated datePublished" datetime="2021-07-06T12:46:19+07:00">2021-07-06</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-08-15 11:23:46" itemprop="dateModified" datetime="2021-08-15T11:23:46+07:00">2021-08-15</time>
+      </span>
 
   
   
@@ -249,8 +255,8 @@
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2021/07/05/ABB-RAPID-%E7%A8%8B%E5%BA%8F%E6%95%B0%E6%8D%AE/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/07/05/ABB-RAPID-程序数据/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2021/07/06/ABB-RAPID-%E7%A8%8B%E5%BA%8F%E4%BB%A5%E5%8F%8A%E6%8C%87%E4%BB%A4/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/07/06/ABB-RAPID-程序以及指令/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -264,28 +270,227 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="什么是程序数据"><a href="#什么是程序数据" class="headerlink" title="什么是程序数据"></a>什么是程序数据</h2><p>类似数据库的概念，建立好数据库，设定好一些程序数据供程序调用：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210705130007.png" alt="20210705130007"></p>
-<h2 id="建立程序数据"><a href="#建立程序数据" class="headerlink" title="建立程序数据"></a>建立程序数据</h2><ol>
-<li>示教器控制面板选择<strong>程序数据</strong>:<br> <img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210705130505.png" alt="20210705130505"></li>
-<li>数据类型选择<strong>bool</strong>,单击<strong>显示数据</strong>:<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210705130542.png" alt="20210705130542"></li>
-<li>新建数据bool-1:<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210705130746.png" alt="20210705130746"></li>
-<li>新建数据bool-2：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210705130937.png" alt="20210705130937"></li>
-<li>建立程序数据num-1:<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210705131223.png" alt="20210705131223"></li>
-<li>建立程序数据num-2,选择数据类型<strong>num</strong>:<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210705131336.png" alt="20210705131336"></li>
-<li>建立程序数据num-3,单击<strong>新建</strong>:<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210705131503.png" alt="20210705131503"></li>
-<li>建立程序数据num-3：<br> <img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210705131603.png" alt="20210705131603"></li>
+          <h2 id="什么是RAPID"><a href="#什么是RAPID" class="headerlink" title="什么是RAPID"></a>什么是RAPID</h2><p>RAPID 是 ABB 机器人使用的编程语言，RAPID程序架构：</p>
+<ul>
+<li>示意图1：<br><br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210706125329.png" alt="20210706125329"></li>
+<li>示意图2：<br><br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210814161255.png" alt="20210814161255"></li>
+<li>示意图3：<br><br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210814161451.png" alt="20210814161451"></li>
+</ul>
+<ol>
+<li>所有ABB机器人都自带两个系统模块：USER,BASE；根据机器人应用不同，有些机器人会配备相应应用的系统模块。建议不要对任何自动生成的系统模块进行修改；</li>
+<li>机器人的程序存储器是由程序模块（Program Module）与系统模块（System Module）组成；</li>
+<li>机器人程序存储器中，只允许存在一个主程序main；</li>
+<li>所有例行程序与程序数据，无论存在于哪个模块，全部被系统共享；</li>
+<li>所有例行程序与程序数据，除特殊定义外，名称必须是唯一的；</li>
+<li>机器人的应用程序一般由三部分组成：程序数据，一个主程序main,和几个例行程序。主程序可以理解为一个特殊的例行程序，是机器人程序运行的开始，控制机器人程序流程；</li>
 </ol>
-<h2 id="程序数据的存储类型"><a href="#程序数据的存储类型" class="headerlink" title="程序数据的存储类型"></a>程序数据的存储类型</h2><ol>
-<li>变量 VAR : 变量型数据在程序执行的过程中和停止时，会保持当前的值，但如果程序指针被移动到主程序后，数值会丢失：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210705132407.png" alt="20210705132407"></li>
-<li>可变量 PERS ：可变量的特点是无论程序的指针如何，都会保持最后的赋值，程序执行后，赋值的结果会一直保持，直到对其进行重新赋值：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210705132634.png" alt="20210705132634"></li>
-<li>常量 CONST : 常量在定义时被赋值，并不能在程序中修改：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210705132926.png" alt="20210705132926"></li>
+<h2 id="RAPID程序编辑"><a href="#RAPID程序编辑" class="headerlink" title="RAPID程序编辑"></a>RAPID程序编辑</h2><ol>
+<li><p>打开ABB菜单后，单击<strong>程序编辑器</strong>，查看RAPID程序：<br><br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210706125609.png" alt="20210706125609"></p>
+</li>
+<li><p>单击<strong>例行程序</strong>，查看例行程序列表： <br><br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210706125920.png" alt="20210706125920"></p>
+</li>
+<li><p>切换到*<strong>模块列表</strong>：<br><br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210706130326.png" alt="20210706130326"></p>
+</li>
 </ol>
-<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><ol>
-<li>ABB 机器人的预置程序数据类型数量巨多，而且用户还可以新增自定义类型。数据类型有点类似C语言的int float boolean…,主要时告诉系统为这个数据分配多少存储单元；</li>
-<li>但 ABB 在新建程序数据，选择数据类型后，又多了一个<strong>存储类型</strong>和<strong>范围</strong>的设定，这样下来，同一个类型，又会有不同的限制条件；</li>
-<li>基本数据类型只有4个: bool, num, dnum, str. 其它属于复合型类型。</li>
+<ul>
+<li>CallPos: 例行程序</li>
+<li>CurrentPos: 功能</li>
+<li>MAIN: 主程序</li>
+<li>tIOControl: 中断程序  </li>
+</ul>
+<ol start="4">
+<li><p>程序模块有2个：CalibData,Module1.系统模块有3个：BASE，LINKEDM,user:<br><br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210706132301.png" alt="20210706132301"></p>
+</li>
+<li><p>程序编辑界面： <br><br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210706132602.png" alt="20210706132602"></p>
+</li>
 </ol>
+<h2 id="常用RAPID指令："><a href="#常用RAPID指令：" class="headerlink" title="常用RAPID指令："></a>常用RAPID指令：</h2><blockquote>
+<p><strong>运动指令单独章节说明</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="right">指令类型</th>
+<th align="center">指令</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">赋值指令</td>
+<td align="center">:=</td>
+<td align="left">Data:=Value</td>
+</tr>
+<tr>
+<td align="right">流程控制指令</td>
+<td align="center">ProCall</td>
+<td align="left">添加指令/ProCall/调用例行程序</td>
+</tr>
+<tr>
+<td align="right">流程控制指令</td>
+<td align="center">IF</td>
+<td align="left">IF…ELSEIF</td>
+</tr>
+<tr>
+<td align="right">流程控制指令</td>
+<td align="center">TEST</td>
+<td align="left">TEST…CASE</td>
+</tr>
+<tr>
+<td align="right">流程控制指令</td>
+<td align="center">WHILE</td>
+<td align="left">WHILE…DO</td>
+</tr>
+<tr>
+<td align="right">输入输出指令</td>
+<td align="center">DO</td>
+<td align="left">机器人输出信号 1(High) 0(Low),需在系统参数中定义</td>
+</tr>
+<tr>
+<td align="right">输入输出指令</td>
+<td align="center">DI</td>
+<td align="left">机器人输入信号 1(High) 0(Low)，需在系统参数中定义</td>
+</tr>
+<tr>
+<td align="right">输入输出指令</td>
+<td align="center">Set</td>
+<td align="left">Set do1; (signaldo) 置位1</td>
+</tr>
+<tr>
+<td align="right">输入输出指令</td>
+<td align="center">Reset</td>
+<td align="left">Reset do1; (signaldo) 复位0</td>
+</tr>
+<tr>
+<td align="right">输入输出指令</td>
+<td align="center">PulseDO</td>
+<td align="left">PulseDO do1; 输出一个长度为0.2s的脉冲信号，[\PLength]-参变量，(num)，长度：0.001s-2000s</td>
+</tr>
+<tr>
+<td align="right">输入输出指令</td>
+<td align="center">WaitDI</td>
+<td align="left">WaitDI di1,1; 等待一个输入信号达到规定状态，[\MaxTime],单位s,超出后停止.[\TimeFlag],bool数据，超出后执行下一条指令，MaxTime内得到信号，逻辑量置为FALSE. 超过MaxTime,逻辑量置为TRUE</td>
+</tr>
+<tr>
+<td align="right">计时指令</td>
+<td align="center">ClkReset</td>
+<td align="left">ClkReset clock1; (clock),将1个机器人时钟复位</td>
+</tr>
+<tr>
+<td align="right">计时指令</td>
+<td align="center">ClkStart</td>
+<td align="left">ClkStart clock1; 开启一个机器人时钟，开始计时</td>
+</tr>
+<tr>
+<td align="right">计时指令</td>
+<td align="center">ClkStop</td>
+<td align="left">ClkStop clock1; 将机器人时钟关闭，停止计时，但仍保持时钟数据至复位</td>
+</tr>
+<tr>
+<td align="right">通信指令</td>
+<td align="center">TPErase</td>
+<td align="left">示教器显示屏清屏指令</td>
+</tr>
+<tr>
+<td align="right">通信指令</td>
+<td align="center">TPWrite</td>
+<td align="left">TPWrite string</td>
+</tr>
+<tr>
+<td align="right">设置指令</td>
+<td align="center">WaitTime</td>
+<td align="left">WaitTime 5; 机器人等待5s,此时程序运行停止</td>
+</tr>
+<tr>
+<td align="right">设置指令</td>
+<td align="center">VelSet</td>
+<td align="left">VelSet 100,5000; 机器人运行速率100%，机器人最大速度5000mm/s, 每个机器人运动指令都有一个运行速度，执行VelSet后，实际运行速度为两者乘积，且不超过最大运行速度</td>
+</tr>
+<tr>
+<td align="right">设置指令</td>
+<td align="center">AccSet</td>
+<td align="left">AccSet 100, 100; 机器人加速度100%，加速度坡度100%</td>
+</tr>
+<tr>
+<td align="right">设置指令</td>
+<td align="center">GripLoad</td>
+<td align="left">GripLoad load0; 设置机器人当前负载</td>
+</tr>
+</tbody></table>
+<h2 id="参变量"><a href="#参变量" class="headerlink" title="参变量"></a>参变量</h2><p>以运动指令<code>MoveL</code>为例:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">MoveL [\Conc,] ToPoint, Speed [\V] [\T], Zone [\Z] [\Inpos], Tool [\Wobj] [\Corr];</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th align="right">变量</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">[\Conc]</td>
+<td align="left">协作运动开关(switch)</td>
+</tr>
+<tr>
+<td align="right">ToPoint</td>
+<td align="left">目标点，默认为*(robotarget)</td>
+</tr>
+<tr>
+<td align="right">Speed</td>
+<td align="left">运行速度数据 (speeddata)</td>
+</tr>
+<tr>
+<td align="right">[\V]</td>
+<td align="left">特殊运行速度m/s (unm)</td>
+</tr>
+<tr>
+<td align="right">[\T]</td>
+<td align="left">运行时间控制s (unm</td>
+</tr>
+<tr>
+<td align="right">Zone</td>
+<td align="left">动行转角数据 (zonedata)</td>
+</tr>
+<tr>
+<td align="right">[\Z]</td>
+<td align="left">特殊运行转角mm (num)</td>
+</tr>
+<tr>
+<td align="right">[\Inpos]</td>
+<td align="left">动行停止点数据 (stoppointdata)</td>
+</tr>
+<tr>
+<td align="right">Tool</td>
+<td align="left">工具中心点 (TCP) (tooldata)</td>
+</tr>
+<tr>
+<td align="right">[\Wobj]</td>
+<td align="left">工件坐标系 (wobjdata)</td>
+</tr>
+<tr>
+<td align="right">[\Corr]</td>
+<td align="left">修正目标点开关 (switch)</td>
+</tr>
+</tbody></table>
+<ol>
+<li><p>选中指令：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210814125453.png" alt="20210814125453"></p>
+</li>
+<li><p>然后再单击一次指令，并选择<strong>可选变量</strong>：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210814125809.png" alt="20210814125809"></p>
+</li>
+<li><p>然后选择可以使用的参变量：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210814125919.png" alt="20210814125919"></p>
+</li>
+<li><p>选择使用的参变量会出现在上一级界面的参变量列表中，供使用以及修改值：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210814143826.png" alt="20210814143826"></p>
+</li>
+</ol>
+<h2 id="Offs功能介绍"><a href="#Offs功能介绍" class="headerlink" title="Offs功能介绍"></a>Offs功能介绍</h2><p><code>MoveL Offs(p1,100,50,0),v100...</code></p>
+<p>Offs(p1,100,50,0)表示一个距离p1点X轴偏差量为100mm,Y轴偏差量为50mm,Z轴偏差量为0的点。函数Offs()的坐标方向与机器人Wobj坐标系一致。</p>
+<ol>
+<li><p>选中目标点进入修改界面：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210814145132.png" alt="20210814145132"></p>
+</li>
+<li><p>在<strong>功能</strong>选项卡里，会自动列出与所选参数类型相同的全部功能：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210814145503.png" alt="20210814145503"></p>
+</li>
+</ol>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><blockquote>
+<p>手动模式下才可以编辑程序。</p>
+</blockquote>
 
       
     </div>
@@ -305,7 +510,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/11/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/13/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/11/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="extend next" rel="next" href="/page/13/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>

@@ -21,30 +21,32 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"dustycn.github.io","root":"/","images":"/images","scheme":"Mist","version":"8.6.1","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="2021年7月3日修改  准备工作 注册Github：建立一个Github repository放博客，reponsitory的名字要是XXX.github.io; 安装 VS Code; 安装 Node.js; 安装Git; 打开git bash设置SSH远程连接：  12git config --global user.name &quot;XXX&quot;git config --glo">
-<meta property="og:type" content="article">
-<meta property="og:title" content="VS Code + Github Pages + Hexo 写博客">
-<meta property="og:url" content="http://dustycn.github.io/2021/01/11/VS-Code-Github-Pages-Hexo-%E5%86%99%E5%8D%9A%E5%AE%A2/index.html">
+<meta name="description" content="dusty@ Studying...">
+<meta property="og:type" content="website">
+<meta property="og:title" content="dusty@">
+<meta property="og:url" content="http://dustycn.github.io/page/18/index.html">
 <meta property="og:site_name" content="dusty@">
-<meta property="og:description" content="2021年7月3日修改  准备工作 注册Github：建立一个Github repository放博客，reponsitory的名字要是XXX.github.io; 安装 VS Code; 安装 Node.js; 安装Git; 打开git bash设置SSH远程连接：  12git config --global user.name &quot;XXX&quot;git config --glo">
+<meta property="og:description" content="dusty@ Studying...">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-01-11T14:00:19.000Z">
-<meta property="article:modified_time" content="2021-10-24T08:54:24.000Z">
 <meta property="article:author" content="dusty">
-<meta property="article:tag" content="VS Code">
-<meta property="article:tag" content="Github">
-<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Arduino">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Raspberry Pi">
+<meta property="article:tag" content="HTML">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="Javascript">
+<meta property="article:tag" content="Vietnam">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://dustycn.github.io/2021/01/11/VS-Code-Github-Pages-Hexo-%E5%86%99%E5%8D%9A%E5%AE%A2/">
+<link rel="canonical" href="http://dustycn.github.io/page/18/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://dustycn.github.io/2021/01/11/VS-Code-Github-Pages-Hexo-%E5%86%99%E5%8D%9A%E5%AE%A2/","path":"2021/01/11/VS-Code-Github-Pages-Hexo-写博客/","title":"VS Code + Github Pages + Hexo 写博客"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"page/18/index.html","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>VS Code + Github Pages + Hexo 写博客 | dusty@</title>
+<title>dusty@ - study notes</title>
   
 
 
@@ -109,7 +111,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -122,7 +124,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="nav-number">1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Hexo"><span class="nav-number">2.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2Github%E6%8F%92%E4%BB%B6"><span class="nav-number">3.</span> <span class="nav-text">安装部署Github插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D"><span class="nav-number">4.</span> <span class="nav-text">绑定域名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E4%B8%BB%E9%A2%98"><span class="nav-number">5.</span> <span class="nav-text">安装主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%91%E5%B8%83-n-g-d-%E2%80%9C%E4%B8%89%E8%81%94%E2%80%9D%EF%BC%89"><span class="nav-number">6.</span> <span class="nav-text">发布(n g d “三联”）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%91%E5%B8%83%E5%9B%BE%E7%89%87"><span class="nav-number">7.</span> <span class="nav-text">发布图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E6%9D%BF%E4%BF%AE%E6%94%B9"><span class="nav-number">8.</span> <span class="nav-text">模板修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%87%E7%BA%A7%E4%B8%BB%E9%A2%98"><span class="nav-number">9.</span> <span class="nav-text">升级主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F"><span class="nav-number">10.</span> <span class="nav-text">添加评论系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0Github%E7%8C%AB"><span class="nav-number">11.</span> <span class="nav-text">添加Github猫</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%90%AF%E6%96%87%E7%AB%A0%E6%89%93%E8%B5%8F"><span class="nav-number">12.</span> <span class="nav-text">开启文章打赏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-number">13.</span> <span class="nav-text">常见问题</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -201,17 +202,16 @@
 </noscript>
 
 
-    <div class="main-inner post posts-expand">
+    <div class="main-inner index posts-expand">
 
-
-  
+    
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://dustycn.github.io/2021/01/11/VS-Code-Github-Pages-Hexo-%E5%86%99%E5%8D%9A%E5%AE%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -224,9 +224,9 @@
       <meta itemprop="name" content="dusty@">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          VS Code + Github Pages + Hexo 写博客
-        </h1>
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/01/11/VS-Code-Github-Pages-Hexo-%E5%86%99%E5%8D%9A%E5%AE%A2/" class="post-title-link" itemprop="url">VS Code + Github Pages + Hexo 写博客</a>
+        </h2>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -270,7 +270,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <blockquote>
+          <blockquote>
 <p>2021年7月3日修改</p>
 </blockquote>
 <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ol>
@@ -366,6 +366,7 @@
 <p>title: JavaScript交作业：十进制数字转罗马数字<br>date: 2021-10-24 15:32:40<br>tags: JavaSrcipt</p>
 <hr>
 
+      
     </div>
 
     
@@ -373,37 +374,8 @@
     
 
     <footer class="post-footer">
-          <div class="reward-container">
-  <div>Buy me a coffee❤️</div>
-  <button>
-    赞赏
-  </button>
-  <div class="post-reward">
-      <div>
-        <img src="/images/wechatpay.png" alt="dusty 微信">
-        <span>微信</span>
-      </div>
-
-  </div>
-</div>
-
-          <div class="post-tags">
-              <a href="/tags/VS-Code/" rel="tag"># VS Code</a>
-              <a href="/tags/Github/" rel="tag"># Github</a>
-              <a href="/tags/Hexo/" rel="tag"># Hexo</a>
-          </div>
-
-        
-
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/2021/01/13/ABB-RobotStudio-%E7%BB%83%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" rel="prev" title="ABB RobotStudio 练习环境搭建">
-                  <i class="fa fa-chevron-left"></i> ABB RobotStudio 练习环境搭建
-                </a>
-            </div>
-            <div class="post-nav-item">
-            </div>
-          </div>
+        <div class="post-eof"></div>
+      
     </footer>
   </article>
 </div>
@@ -411,13 +383,10 @@
 
 
 
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/17/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><span class="page-number current">18</span>
+  </nav>
 
-
-    
-  <div class="comments" id="disqus_thread">
-    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-  </div>
-  
 </div>
   </main>
 

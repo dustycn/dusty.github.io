@@ -24,7 +24,7 @@
 <meta name="description" content="dusty@ Studying...">
 <meta property="og:type" content="website">
 <meta property="og:title" content="dusty@">
-<meta property="og:url" content="http://dustycn.github.io/page/7/index.html">
+<meta property="og:url" content="http://dustycn.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="dusty@">
 <meta property="og:description" content="dusty@ Studying...">
 <meta property="og:locale" content="zh_CN">
@@ -39,14 +39,14 @@
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://dustycn.github.io/page/7/">
+<link rel="canonical" href="http://dustycn.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"page/7/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"tags/学习笔记/index.html","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>dusty@ - study notes</title>
+<title>标签: 学习笔记 | dusty@</title>
   
 
 
@@ -202,121 +202,50 @@
 </noscript>
 
 
-    <div class="main-inner index posts-expand">
-
-    
+    <div class="main-inner tag posts-collapse">
 
 
-<div class="post-block">
   
   
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://dustycn.github.io/2021/07/31/ABB%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%A0%A1%E5%87%86%EF%BC%9A%E8%BD%AC%E6%95%B0%E8%AE%A1%E6%95%B0%E5%99%A8%E6%9B%B4%E6%96%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="dusty">
-      <meta itemprop="description" content="dusty@ Studying...">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="dusty@">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/07/31/ABB%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%A0%A1%E5%87%86%EF%BC%9A%E8%BD%AC%E6%95%B0%E8%AE%A1%E6%95%B0%E5%99%A8%E6%9B%B4%E6%96%B0/" class="post-title-link" itemprop="url">ABB机器人校准：转数计数器更新</a>
+  
+  <div class="post-block">
+    <div class="post-content">
+      <div class="collection-title">
+        <h2 class="collection-header">学习笔记
+          <small>标签</small>
         </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-07-31 08:04:06 / 修改时间：09:33:12" itemprop="dateCreated datePublished" datetime="2021-07-31T08:04:06+07:00">2021-07-31</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2021/07/31/ABB%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%A0%A1%E5%87%86%EF%BC%9A%E8%BD%AC%E6%95%B0%E8%AE%A1%E6%95%B0%E5%99%A8%E6%9B%B4%E6%96%B0/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/07/31/ABB机器人校准：转数计数器更新/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="ABB机器人转数计数器更新"><a href="#ABB机器人转数计数器更新" class="headerlink" title="ABB机器人转数计数器更新"></a>ABB机器人转数计数器更新</h2><p><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210122128.png" alt="20210210122128"></p>
-<p>ABB机器人6个关节轴都有一个机械原点的位置，在以下情况下需要更新计数器：</p>
-<ul>
-<li>更换伺服电机转数计数器电池；</li>
-<li>转数计数器故障修复后；</li>
-<li>转数计数器与测量板断开过；</li>
-<li>断电后，机器人关节移动过；</li>
-<li>机器报警提示“10036转数计数器未更新”。</li>
-</ul>
-<p><strong>推荐关节轴调整顺序：4-&gt;5-&gt;6-&gt;1-&gt;2-&gt;3</strong>，因为有些大型机器人，如果123轴先校准好，456轴可能就会很高了，不方便观察。</p>
-<h2 id="校准步骤"><a href="#校准步骤" class="headerlink" title="校准步骤"></a>校准步骤</h2><ol>
-<li><p>示教器控制面板，选择<strong>校准</strong>：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210731090716.png" alt="20210731090716"></p>
-</li>
-<li><p>选择机器人：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210731090804.png" alt="20210731090804"></p>
-</li>
-<li><p><strong>手动方法（高级）</strong>录入电动机校准偏移数据：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210731090956.png" alt="20210731090956"></p>
-</li>
-<li><p>选择<strong>校准参数</strong>，<strong>编辑电机校准偏移</strong>：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210731091231.png" alt="20210731091231"></p>
-</li>
-<li><p>将机器人本体上电动机校准偏移记录下来：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210123348.png" alt="20210210123348"></p>
-</li>
-<li><p>录入记录的本体电机校准偏移数据，如果一致则不需要修改，取消退出：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210731091729.png" alt="20210731091729"></p>
-</li>
-<li><p>提示重启控制器，重启后，按照以上步骤，进入转数计数器，<strong>更新转数计数器</strong>：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210731092129.png" alt="20210731092129"></p>
-</li>
-<li><p>手动操作让机器人各关节轴运动到机械原点刻度，<strong>推荐关节轴调整顺序：4-&gt;5-&gt;6-&gt;1-&gt;2-&gt;3</strong>，因为有些大型机器人，如果123轴先校准好，456轴可能就会很高了，不方便观察：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210210122706.png" alt="20210210122706"></p>
-</li>
-<li><p>手动操作原点完成后，全选更新，一次更新所有轴计数器：<br> <img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210731093047.png" alt="20210731093047"></p>
-</li>
-<li><p>如果由于安装位置关系，6个轴无法同时到达机械轴原点刻度位置可以逐一对关节轴转数计数器更新：<br><img src="https://cdn.jsdelivr.net/gh/dustycn/images/blogImages/20210731093250.png" alt="20210731093250"></p>
-</li>
-</ol>
+      </div>
 
       
+    <div class="collection-year">
+      <span class="collection-header">2022</span>
     </div>
 
-    
-    
-    
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2022-04-20T14:23:17+07:00"
+              content="2022-04-20">
+          04-20
+        </time>
+      </div>
 
-    <footer class="post-footer">
-        <div class="post-eof"></div>
+      <div class="post-title">
+          <a class="post-title-link" href="/2022/04/20/%E3%80%8A%E5%86%AF%E9%9B%AA%E7%A7%91%E5%AD%A6%E5%87%8F%E8%82%A5%E8%AF%BE%E3%80%8B%E7%AC%94%E8%AE%B0/" itemprop="url">
+            <span itemprop="name">《冯雪科学减肥课》笔记</span>
+          </a>
+      </div>
+
       
-    </footer>
+    </header>
   </article>
-</div>
 
-
-
-
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
+    </div>
+  </div>
+  
+  
+  
 
 </div>
   </main>
